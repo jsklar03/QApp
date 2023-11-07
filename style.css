@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    font-family: 'Helvetica', sans-serif;
+  }
+
+header {
+    height: 40px;
+    width: 100%;
+    color: royalblue;
+    margin: 0;
+  }
+
+  main {
+    height: 100%; /* Take up the full height of the viewport */
+    width: 100%; /* Take up the full width of the viewport */
+    padding:20px;
+    outline: solid 10px;
+    outline-color: green;
+  }
+
+  h1 {
+    padding-left: 20px;
+  }
+
+  #hero_flex{
+    display: flex;
+    flex-direction: row;
+  }
+
+  #score_flex{
+    display:flex;
+    flex-direction: row;
+  }
+
+  #topics{
+    display:flex;
+    flex-direction: column;
+  }
+
+
