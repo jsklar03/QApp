@@ -1,55 +1,77 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>QuizApp</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <div id="header_div">
-                <h1>QuizApp</h1>
+    
+<head>
+    <meta charset="UTF-8">
+    <title>QuizApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+      <div class="logo">QuizApp</div>
+    </header>
+    <div class="hero">
+      <div class="hero_flex">
+        <div class="chart_box">
+          <div class="chart">
+            <img
+              loading="lazy"
+              srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&"
+              class="img"
+            />
+          </div>
+        </div>
+        <div class="instruction_box">
+          <div class="instruction">
+            <div class="instruction_title">QuizApp:</div>
+            <div class="instruction_steps">
+              1- Pick a Topic
+              <br/>
+              2- Take the Quizzes
+              <br/>
+              3- Track your score
+              <br/>
+              4- Learn!
             </div>
-        </header>
-        <main>
-            <!-- master div for the hero page -->
-            <div id="hero">
-                <div class="flex_home" id="hero_flex">
-                    <div id="home_chart">
-                        <p>CHART</p>
-                    </div>
-                    <div id="instructions">
-
-                    </div>
-                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scoreboard_box">
+      <div class="scoreboard_flex">
+        <div class="total_q_col">
+          <div class="total_q_flex">
+            <div class="total_score_title">Total</div>
+            <div class="score" id="total_q">12</div>
+          </div>
+        </div>
+        <div class="correct_q_col">
+            <div class="correct_score_holder">
+                <div class="score" id="correct_score">11</div>
             </div>
-            <!-- master div for the scoreboard -->
-            <div id="scoreboard">
-                <div class="flex_home" id="score_flex">
-                    <div class="scores" id="total_qs">
-
-                    </div>
-                    <div class="scores" id="right_qs">
-
-                    </div>
-                    <div class="scores" id="wrong_qs">
-
-                    </div>
-                    <div class="scores" id="percent">
-
-                    </div>
-                </div>
+        </div>
+        <div class="wrong_q_col">
+            <div class="wrong_score_q">
+                <div class="score" id="wrong_score">1</div>
             </div>
-            <!-- master div for the scoreboard -->
-            <div id="topics">
-                <div class="flex_home" id="topics_flex">
-
-                </div>
-
-            </div>
-            
-            <h1>My First Heading</h1>
-            <p>My first paragraph.</p>  
-        </main>
+        </div>
+        <div class="percent_col">
+            <div class="score" id="percent_score">91.7%</div>
+        </div>
+        <!-- End of scoreboard -->
+      </div>
+    </div>
+    <div class="topic_div">Geography</div>
+    <div class="topic_div">Economics</div>
+    <div class="topic_div">World History</div>
+    <div class="topic_div">US Politics</div>
+    <div class="topic_div">US History</div>
+    <div class="topic_div">World Politics</div>
+    <div class="topic_div">Sports</div>
+    <div class="topic_div">Finance</div>
     </body>
 </html>
+
+  
+
+  
