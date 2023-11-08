@@ -1,6 +1,6 @@
 /* Styles the body */
 .body {
-    background-color: #fff;
+    background-color: white;
     display: flex;
     flex-direction: column;
     width:100%;
@@ -8,9 +8,7 @@
 
 /* Styles the header */
 .header {
-    /* border-radius: var(--selectedItem, 0px); */
     background-color: white;
-    /* color: #4169e1; */
     align-self: stretch;
     display: flex;
     width: 100%;
@@ -26,7 +24,7 @@
 }
 
 .hero {
-    border-radius: var(--selectedItem, 0px);
+    /* border-radius: var(--selectedItem, 0px); */
     background-color: #4169e1;
     align-self: center;
     margin-top: 33px;
@@ -50,9 +48,8 @@
 
 .chart {
     border-radius: var(--selectedItem, 0px) 360px 360px var(--selectedItem, 0px);
-    background-color: #fff;
+    background-color: white;
     display: flex;
-    /* flex-grow: 1; */
     flex-direction: column;
     width: 100%;
     margin: 0 auto;
@@ -63,7 +60,6 @@
 }
 
 .img {
-    aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
     width: 375px;
@@ -225,7 +221,7 @@
     font: italic 700 100px Inter, sans-serif;
 }
 
-.topic_div {
+.topic_div, .quiz_div {
     color: #fff;
     align-self: center;
     white-space: nowrap;
