@@ -1,5 +1,4 @@
 .header_box {
-    border-radius: var(--selectedItem, 0px);
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -8,7 +7,6 @@
 .logo {
     color: royalblue;
     align-items: flex-start;
-    border-radius: var(--selectedItem, 0px);
     align-self: start;
     width: 100%;
     padding-top: 12px; 
@@ -44,7 +42,6 @@
     color: white;
     align-self: end;
     margin-right: 15px;
-    white-space: nowrap;
     font: 700 50px Helvetica, sans-serif;
   }
 
@@ -59,7 +56,6 @@
 .answer_list {
     position: relative;
     align-items: flex-start;
-    border-radius: var(--selectedItem, 0px);
     align-self: center;
     display: flex;
     margin-top: 60px;
