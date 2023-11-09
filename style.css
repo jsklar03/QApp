@@ -1,5 +1,5 @@
 /* Styles the body */
-.body {
+html, .body {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -13,28 +13,23 @@
     display: flex;
     width: 100%;
     align-items: flex-start;
-    justify-content: space-between;
-    /* gap: 20px; */
-    /* padding: 18px 130px 18px 41px; */
 }
 
+/* Styles the "QuizApp" logo*/
 .logo {
     color: royalblue;
     font: 24px Helvetica, sans-serif;
 }
 
 .hero {
-    /* border-radius: var(--selectedItem, 0px); */
     background-color: #4169e1;
     align-self: center;
     margin-top: 33px;
     width: 100%;
-    /* max-width: 1375px; */
-    padding-right: 74px;
 }
 
+/* Do I even need this div down here? */
 .hero_flex {
-    gap: 20px;
     display: flex;
 }
 
@@ -47,7 +42,7 @@
     }
 
 .chart {
-    border-radius: var(--selectedItem, 0px) 360px 360px var(--selectedItem, 0px);
+    border-radius: 0px 360px 360px 0px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -59,11 +54,11 @@
     padding-bottom: 11px;
 }
 
+/* placeholder for chart picture */
 .img {
     object-fit: contain;
     object-position: center;
     width: 375px;
-    overflow: hidden;
     align-self: start;
     margin-left: 16px;
     max-width: 100%;
@@ -84,16 +79,15 @@
 }
 
 .instruction_title {
-    color: #fff;
+    color: white;
     text-align: center;
-    align-self: end;
-    white-space: nowrap;
+    align-self: start;
     font: italic 700 50px Inter, sans-serif;
 }
 
 .instruction_steps {
     justify-content: center;
-    color: #fff;
+    color: white;
     align-self: end;
     margin-top: 31px;
     max-width: 558px;
@@ -104,12 +98,9 @@
     align-self: center;
     margin-top: 39px;
     width: 100%;
-    max-width: 1358px;
-    padding: 0 20px;
 }
 
 .scoreboard_flex {
-    gap: 20px;
     display: flex;
 }
 
@@ -123,115 +114,77 @@
 
 .total_q_flex {
     border-radius: var(--selectedItem, 0px);
-    background-color: #fff;
+    background-color: white;
     display: flex;
     width: 100%;
-    max-width: 339px;
-    flex-grow: 1;
     flex-direction: column;
     margin: 0 auto;
-    padding: 13px 0 89px;
 }
 
 .total_score_title {
     color: royalblue;
     text-align: center;
-    align-self: end;
-    white-space: nowrap;
-    font: italic 700 50px Inter, sans-serif;
+    align-self: start;
+    font: italic 700 20px Inter, sans-serif;
 }
 
 #total_q {
     color: royalblue;
     text-align: center;
-    align-self: end;
-    margin-top: 38px;
-    white-space: nowrap;
+    align-self: start;
     font: italic 700 100px Inter, sans-serif;
 }
 
-.correct_q_col {
+/* Styles these boxes within the scoreboard */
+.correct_q_col, .wrong_q_col, .percent_col {
     display: flex;
     flex-direction: column;
     line-height: normal;
     width: 25%;
-    margin-left: 20px;
 }
 
-
 .correct_score_holder {
-    border-radius: var(--selectedItem, 0px);
     background-color: #7bb44e;
     display: flex;
     width: 100%;
-    max-width: 339px;
-    flex-grow: 1;
     flex-direction: column;
     margin: 0 auto;
-    padding: 89px 80px;
 }
-
-.wrong_q_col {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 25%;
-    margin-left: 20px;
-}
-
 
 .wrong_score_q {
-    border-radius: var(--selectedItem, 0px);
     background-color: #eb3333;
     display: flex;
     width: 100%;
-    max-width: 340px;
-    flex-grow: 1;
     flex-direction: column;
     margin: 0 auto;
-    padding: 85px 80px 93px;
 }
 
 .score {
-    color: #fff;
+    color: white;
     text-align: center;
     align-self: center;
     font: italic 700 100px Inter, sans-serif;
 }
 
-.percent_col {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 25%;
-    margin-left: 20px;
-}
-
 #percent_score {
-    color: #fff;
+    color: white;
     text-align: center;
-    align-self: stretch;
-    border-radius: var(--selectedItem, 0px);
     background-color: #4169e1;
     width: 100%;
-    max-width: 339px;
-    flex-grow: 1;
     margin: 0 auto;
-    padding: 83px 34px 90px 32px;
     font: italic 700 100px Inter, sans-serif;
 }
 
 .topic_div, .quiz_div {
-    color: #fff;
+    color: white;
     align-self: center;
-    white-space: nowrap;
     border-radius: 25px;
     background-color: #4169e1;
-    z-index: 1;
     margin-top: 35px;
-    width: 100%;
-    max-width: 1374px;
-    padding: 72px 80px 63px 50px;
+    width: 100% - 50px;
+    padding-top:2px;
+    padding-bottom:1.75px;
+    padding-left:50px;
     font: 700 48px Inter, sans-serif;
 }
 

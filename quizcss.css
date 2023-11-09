@@ -1,0 +1,130 @@
+.header_box {
+    border-radius: var(--selectedItem, 0px);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+.logo {
+    color: royalblue;
+    align-items: flex-start;
+    border-radius: var(--selectedItem, 0px);
+    align-self: start;
+    width: 100%;
+    padding-top: 12px; 
+    padding-right: 80px;
+    padding-bottom: 12px;
+    padding-left: 41px;
+    font: 700 24px Helvetica, sans-serif;
+  }
+
+.quiz_title {
+    color: royalblue;
+    align-self: stretch;
+    font: 700 48px Helvetica, sans-serif;
+  }
+
+.img_placeholder {
+    display: flex;
+    flex-direction: column;
+    background-color: royalblue;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    align-self: center;
+    position: relative;
+    display: flex;
+    height: 600px;
+    margin-top: 91px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px 36px 30px 39px;
+  }
+
+.question_number {
+    position: relative;
+    color: white;
+    align-self: end;
+    margin-right: 15px;
+    white-space: nowrap;
+    font: 700 50px Helvetica, sans-serif;
+  }
+
+.question {
+    position: relative;
+    color: white;
+    align-self: center;
+    margin-top: 40px;
+    font: 700 50px Helvetica, sans-serif;
+  }
+
+.answer_list {
+    position: relative;
+    align-items: flex-start;
+    border-radius: var(--selectedItem, 0px);
+    align-self: center;
+    display: flex;
+    margin-top: 60px;
+    width: 345px;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 2px 0;
+  }
+
+.answer {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.answer_name {
+    color: white;
+    align-self: stretch;
+    flex-basis: auto;
+    font: italic 700 30px Helvetica, sans-serif;
+  }
+
+.forward_back_box {
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    margin-top: 100px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+.back, .forward {
+    color: white;
+    align-self: stretch;
+    font: 700 50px Helvetica, sans-serif;
+  }
+
+.submit_container {
+    border-radius: 40px;
+    align-self: center;
+    display: flex;
+    width: 400px;
+    max-width: 100%;
+    flex-direction: column;
+    margin: 330px 0 0 108px;
+  }
+
+.submit_button {
+    border: 1px solid black;
+    border-radius: 40px;
+    background-color: #00a3ff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    align-self: stretch;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 25px 80px;
+  }
+
+.submit_quiz {
+    justify-content: center;
+    color: white;
+    text-align: center;
+    align-self: center;
+    font: italic 700 36px Helvetica, sans-serif;
+  }
