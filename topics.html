@@ -9,7 +9,9 @@
 <body>
     <header class="header">
       <section class="logo">
-        <h1>QuizApp</h1>
+        <a class="link" href="../index.html">
+          <h1>QuizApp</h1>
+        </a>
       </section>
     </header>
 <main>
@@ -38,10 +40,17 @@
       </div>
     </div>
     <!-- Beggining of Quiz Section -->
-    <section class="quiz_div">
-      <h1>Geography</h1>
-    </section>
-    <section class="quiz_div">
+    <template id="quiz_temp">
+      <div class="quiz_holder">
+      <a class="quiz_link" href="../quiz.html">
+        <section class="quiz_div">
+          <h1>Geography</h1>
+        </section>
+      </a>
+      </div>
+    </template>
+
+    <!-- <section class="quiz_div">
       <h1>Economics</h1>
     </section>
     <section class="quiz_div">
@@ -61,7 +70,7 @@
     </section>
     <section class="quiz_div">
       <h1>Finance</h1>
-    </section>
+    </section> -->
 </main>
     </body>
 </html>

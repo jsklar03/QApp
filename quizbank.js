@@ -1,5 +1,5 @@
-{"quiz_bank":{
-    "questions":{
+const quiz_bank = {
+    "quizzes":{
         "us_state_capitols":{
             "easy":{
                 "q1":"What is the capitol of New York?",
@@ -94,6 +94,5 @@
 
             }
         }
-    }
 
 
