@@ -1,3 +1,10 @@
+function select_topic(element){
+    const topic_listener = document.querySelector('.link');
+    topic_listener.addEventListener('click',()=>{
+        
+    })
+}
+
 function createElement(quiz) {
     // make a clone of the notecard template
     const template = document.querySelector('#quiz_temp');
