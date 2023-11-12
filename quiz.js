@@ -17,10 +17,8 @@ let quiz_level = quiz_bank["topic"][topic]["us_state_capitols"][level]
 console.log(quiz_source)
 console.log(quiz_level)
 
-const quiz = new quizzle(topic);
-
 //kicks off the createQuizzes function
-function populate_topic(){
+function populate_quiz(){
     const topic_listener = document.querySelector('.quiz_list');
     console.log(topic_listener);
     console.log("first function triggered")
