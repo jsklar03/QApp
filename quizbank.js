@@ -1,7 +1,6 @@
 const quiz_bank = {
     "topic":{
         "geography":{
-            "us_state_capitols":{
                 "levels":{
                     "easy":{
                         "q1":"What is the capitol of New York?",
@@ -45,10 +44,22 @@ const quiz_bank = {
                         "a4":"Cheyenne",
                         "a5":"Santa Fe"
                     }
-                }
+                },
+        "world_geography":{
+            "easy":{
+                "q1":"What is the capitol of Spain?",
+                "q2":"What is the largest country by land mass?",
+                "q3":"What is the most populated country?"
+            },
+            "easy_a":{
+                "a1":"Madrid",
+                "a2":"Russia",
+                "a3":"India"
             }
         }
-    },
+    }
+},
+
     "economics":{
         "micro":{
     
@@ -101,11 +112,24 @@ const quiz_bank = {
 
 const quiz_list=[]
 
+const temp_quiz_list=[]
+
+const topic_list=["geography"]
+const geography_topic_list=["us_state_capitols","world_geography"]
+
 class quizzle {
-    constructor (quizTopic, quizLevel) {
+    constructor (quizTopic, quizSubTopic, quizLevel) {
         this.quizTopic = quizTopic;
+        this.quizSubTopic = quizSubTopic;
         this.quizLevel =  quizLevel;
         this.quiz = (quizTopic, quizLevel)
         this.element = null;
+    }
+}
+
+class question {
+    constructor(question,answer){
+        this.question= null;
+        this.answer= null;
     }
 }

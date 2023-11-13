@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>QuizApp</title>
     <link rel="stylesheet" href="style.css">
-    <script src="quizbank.js"></script>
-    <script defer src="topics.js" onload="populate_topic()"></script>
+    <!-- <script src="quizbank.js"></script>
+    <script defer src="topics.js" onload="populate_topic()"></script> -->
 </head>
 
 <body>
@@ -44,15 +44,30 @@
     </div>
     <!-- Beggining of Quiz Section -->
     <div id="quiz_list">
-    <template id="quiz_temp">
-      <div class="quiz_holder">
+      <div class="quiz_holder" id="easy">
       <a class="quiz_link" href="../quiz.html?topic=geography&level=easy">
         <section class="quiz_div">
-          <h1>Geography</h1>
+          <h1>Easy</h1>
         </section>
       </a>
       </div>
-    </template>
+
+      <div class="quiz_holder" id="medium">
+        <a class="quiz_link" href="../quiz.html?topic=geography&level=medium">
+          <section class="quiz_div">
+            <h1>Medium</h1>
+          </section>
+        </a>
+      </div>
+
+      <div class="quiz_holder" id="hard">
+        <a class="quiz_link" href="../quiz.html?topic=geography&level=hard">
+          <section class="quiz_div">
+            <h1>Hard</h1>
+          </section>
+        </a>
+      </div>
+
     </div>
 </main>
     </body>
