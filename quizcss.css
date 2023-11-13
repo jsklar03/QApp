@@ -22,7 +22,7 @@
     font: 700 48px Helvetica, sans-serif;
   }
 
-.img_placeholder {
+.card_placeholder {
     display: flex;
     flex-direction: column;
     background-color: royalblue;

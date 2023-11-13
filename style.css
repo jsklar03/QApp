@@ -28,6 +28,12 @@ html, .body {
     width: 100%;
 }
 
+.quiz_title {
+    color: royalblue;
+    align-self: stretch;
+    font: 700 48px Helvetica, sans-serif;
+  }
+
 /* Do I even need this div down here? */
 .hero_flex {
     display: flex;

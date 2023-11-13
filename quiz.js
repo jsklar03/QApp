@@ -17,10 +17,6 @@ let quiz_level = quiz_bank["topic"][topic]["levels"][level]
 console.log(quiz_source)
 console.log(quiz_level)
 
-//gets the answer key
-let quiz_answers = quiz_bank["topic"][topic]["levels"][level + "_a"]
-console.log(quiz_answers)
-
 console.log(localStorage.getItem('storedItem'))
 
 //kicks off the createQuizzes function
@@ -29,34 +25,41 @@ function populate_quiz(){
     console.log(topic_listener);
     console.log("first function triggered")
     
-    createQuizzes();
+    updateQuizcard();
 }
 
-// Populates the topics page with quizzes
-// function createQuizzes(quiz) {
-//     // make a clone of the notecard template
-//     console.log("second function triggered")
-//     const template = document.querySelector('#quiz_temp');
-//     console.log(template)
-    
-//     // for (let i of quiz_bank["topic"][topic]["levels"][level]){
-//     //     const clone = template.content.cloneNode(true);
-//     //     quiz.element = clone.querySelector('.quiz_link');
-//     //     const quizListElement = document.querySelector('#quiz_list');
-//     //     quizListElement.appendChild(quiz);
-//     // }
+//DOM items for updating quiz card
+let card= document.querySelector('.card_placeholder');
+let question_number= document.querySelector('.question_number');
+let card_question = document.querySelector('.question');
+// let answer_list= document.querySelector('answer_list');
+let option_1= document.querySelector('#a');
+let option_2= document.querySelector('#b');
+let option_3= document.querySelector('#c');
+let option_4= document.querySelector('#d');
+let back_btn= document.querySelector('.back');
+let forward_btn= document.querySelector('.forward');
 
-//     // const clone = template.content.cloneNode(true);
-//     console.log(clone)
-    
-//     // connect this clone to our notecard.element
-//     // from this point we only need to refer to notecard.element
-//     // quiz.element = clone.querySelector('.quiz_link');
-//     console.log(quiz.element)
+let q_counter = 0
+//gets the answer key
+let quiz_answers = quiz_bank["topic"][topic]["levels"][level + "_a"]
+console.log(quiz_answers)
+let a1 = quiz_answers['a1']
+console.log(a1);
+let b1 = quiz_answers['a2']
+let c1 = quiz_answers['a3']
+let d1 = quiz_answers['a4']
 
-//     // const quiz_button = quiz.element.querySelector(".quiz_holder");
-//     // console.log(quiz_button)
-  
-//     // const quizListElement = document.querySelector('#quiz_list');
-//     // quizListElement.appendChild(quiz.element);
-// }
+let q1=quiz_level['q1']
+
+function updateQuizcard(question_number,card_question){
+    q_counter+=1;
+    console.log(q_counter);
+    // question_number.innerHTML(q_counter);
+    card_question.innerHTML(quiz_level);
+    option_1.innerHTML(a1);
+    option_2.innerHTML(a2);
+    option_3.innerHTML(a3);
+    option_4.innerHTML(a4);
+}
+
