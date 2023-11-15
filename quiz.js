@@ -9,20 +9,20 @@ const params = new URLSearchParams(queryString);
 const topic = params.get('topic');
 console.log(topic);
 const level = params.get('level');
-console.log(level)
+console.log(level);
 
 //defines the inputs to the quizzle class object. 
 // sets quiz source, quiz level, quiz mc options, quiz answers
-let quiz_source = quiz_bank["topic"][topic]
-let quiz_level = quiz_bank["topic"][topic]["levels"][level]
-let quiz_mc = quiz_bank["topic"][topic]["levels"][level + "_mc"]
-let quiz_answers = quiz_bank["topic"][topic]["levels"][level + "_a"]
+let quiz_source = quiz_bank["topic"][topic];
+let quiz_level = quiz_bank["topic"][topic]["levels"][level];
+let quiz_mc = quiz_bank["topic"][topic]["levels"][level + "_mc"];
+let quiz_answers = quiz_bank["topic"][topic]["levels"][level + "_a"];
 
 // console.log(localStorage.getItem('storedItem'))
 
 //kicks off the createQuizzes function
 function populate_quiz(){
-    console.log("first function triggered")
+    console.log("first function triggered");
     updateQuizCard();
 }
 
@@ -33,9 +33,9 @@ let card_question = document.querySelector('.question');
 let back_btn= document.querySelector('.back');
 let forward_btn= document.querySelector('.forward');
 
-let q_counter = 0
+let q_counter = 0;
 
-let question_array = [quiz_level[0],quiz_level[1],quiz_level[2],quiz_level[3],quiz_level[4]]
+let question_array = [quiz_level[0],quiz_level[1],quiz_level[2],quiz_level[3],quiz_level[4]];
 
 function updateQuizCard(){
     console.log(q_counter);
@@ -59,14 +59,13 @@ function goBackQuestion(){
     if(q_counter<1){
         q_counter=1;
     }
-    for (let i=0;i<=1;i++){
+    for (let i=0;i<1;i++){
         document.querySelector('.question_number').innerHTML = q_counter;
     }
-    for(let k=0;k<=5;k++){
-        console.log(k)
-        console.log(question_array[q_counter - 1])
+    for(let k=0;k<1;k++){
+        console.log(k);
+        console.log(question_array[q_counter - 1]);
         document.querySelector('.question').innerHTML = question_array[q_counter - 1];
-        return k
     }
     updateMultipleChoice();
 }
@@ -80,13 +79,26 @@ function updateMultipleChoice(){
     document.querySelector('#b').innerHTML = quiz_mc[q_counter - 1][1];
     document.querySelector('#c').innerHTML = quiz_mc[q_counter - 1][2];
     document.querySelector('#d').innerHTML = quiz_mc[q_counter - 1][3];
+    let answer_a = document.querySelector('#a').innerHTML;
+    let answer_b = document.querySelector('#b').innerHTML;
+    let answer_c = document.querySelector('#c').innerHTML;
+    let answer_d = document.querySelector('#d').innerHTML;
+    console.log(answer_a, answer_b, answer_c, answer_d);
 }
+let answer_a = document.querySelector('#a').innerHTML;
+let answer_b = document.querySelector('#b').innerHTML;
+let answer_c = document.querySelector('#c').innerHTML;
+let answer_d = document.querySelector('#d').innerHTML;
+console.log(answer_a,answer_b,answer_c,answer_d)
+
 
 function recordAnswers(){
-
+    user_answers.push()
+    console.log(answer_a, answer_b, answer_c, answer_d);
 }
 
 function checkAnswers(){
+    console.log(updateMultipleChoice());
     for(let i=0, k=0;i<user_answers.length,k<real_answers.length;i++,k++){
         total_counter+=1;
         if (i==k){

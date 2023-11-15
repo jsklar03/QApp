@@ -30,16 +30,16 @@
         <!-- Multiple Choice list -->
         <div class="answer_list">
           <div class="answer">
-            <div class="answer_name" id="a">Lansing</div>
+            <div class="answer_name" id="a" onclick="recordAnswers()"></div>
           </div>
           <div class="answer">
-            <div class="answer_name" id="b">Detroit</div>
+            <div class="answer_name" id="b" onclick="recordAnswers()"></div>
           </div>
           <div class="answer">
-            <div class="answer_name" id="c">Saginaw</div>
+            <div class="answer_name" id="c" onclick="recordAnswers()"></div>
           </div>
           <div class="answer">
-            <div class="answer_name" id="d">Kalamazoo</div>
+            <div class="answer_name" id="d" onclick="recordAnswers()"></div>
           </div>
         </div>
         <!-- Buttons on the question to go back or skip -->
@@ -49,16 +49,12 @@
         </div>
         <!-- end of card placeholder -->
         <!-- <div class="submit_container"> -->
+        <a class="link" href="../results.html">
           <div class="submit_button" onclick="checkAnswers()">
               <div class="submit_quiz">Submit Quiz</div>
           </div>
-        <!-- </div> -->
+        </a>
       </div>
-      <!-- <div class="submit_container">
-        <div class="submit_button">
-            <div class="submit_quiz">Submit Quiz</div>
-        </div>
-      </div> -->
     </div>
   </div>
 </body>
