@@ -11,6 +11,8 @@ console.log(topic);
 const level = params.get('level');
 console.log(level);
 
+document.querySelector('.quiz_title').innerHTML = topic +" - "+level;
+
 //defines the inputs to the quizzle class object. 
 // sets quiz source, quiz level, quiz mc options, quiz answers
 let quiz_source = quiz_bank["topic"][topic];
@@ -91,7 +93,7 @@ let answer_c = document.querySelector('#c').innerHTML;
 let answer_d = document.querySelector('#d').innerHTML;
 console.log(answer_a,answer_b,answer_c,answer_d)
 
-
+//Need to do these two functions below to complete the Quiz.JS page
 function recordAnswers(){
     user_answers.push()
     console.log(answer_a, answer_b, answer_c, answer_d);
