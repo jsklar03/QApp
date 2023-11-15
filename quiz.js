@@ -14,7 +14,6 @@ console.log(level)
 //defines the inputs to the quizzle class object. NEED TO UPDATE THESE TO POPULATE DYNAMICALLY
 let quiz_source = quiz_bank["topic"][topic]
 let quiz_level = quiz_bank["topic"][topic]["levels"][level]
-console.log(quiz_source)
 console.log(quiz_level)
 
 console.log(localStorage.getItem('storedItem'))
@@ -50,16 +49,27 @@ let b1 = quiz_answers['a2']
 let c1 = quiz_answers['a3']
 let d1 = quiz_answers['a4']
 
-let q1=quiz_level['q1']
+let question_array = [quiz_level['q1'],quiz_level['q2'],quiz_level['q3'],quiz_level['q4'],quiz_level['q5']]
+let answer_array = [a1,b1,c1,d1]
 
-function updateQuizcard(question_number,card_question){
-    q_counter+=1;
+function updateQuizcard(){
     console.log(q_counter);
-    // question_number.innerHTML(q_counter);
-    card_question.innerHTML(quiz_level);
-    option_1.innerHTML(a1);
-    option_2.innerHTML(a2);
-    option_3.innerHTML(a3);
-    option_4.innerHTML(a4);
+    q_counter +=1;
+    console.log(q_counter)
+    for (let i=0;i<=1;i++){
+        document.querySelector('.question_number').innerHTML = q_counter;
+        for(let i=0;i<=5;i++){
+            document.querySelector('.question').innerHTML = question_array[i];
+            return i
+        }
+    }
+    // for(let i=0;i<=5;i++){
+    //     document.querySelector('.question').innerHTML = question_array[i];
+    //     return i
+    // }
+}
+
+function skipQuestion(){
+
 }
 
