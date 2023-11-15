@@ -2,47 +2,51 @@ const quiz_bank = {
     "topic":{
         "geography":{
                 "levels":{
-                    "easy":{
-                        "q1":"What is the capitol of New York?",
-                        "q2":"What is the capitol of Oklahoma?",
-                        "q3":"What is the capitol of Massachusetts?",
-                        "q4":"What is the capitol of Texas?",
-                        "q5":"What is the capitol of Arizona?"
-                    },
-                    "easy_a":{
-                        "a1":"Albany",
-                        "a2":"Oklahoma City",
-                        "a3":"Boston",
-                        "a4":"Austin",
-                        "a5":"Pheonix"
-                    },
-                    "medium":{
-                        "q1":"What is the capitol of Michigan?",
-                        "q2":"What is the capitol of Illinois?",
-                        "q3":"What is the capitol of Wisconsin?",
-                        "q4":"What is the capitol of California?",
-                        "q5":"What is the capitol of Florida?"
-                    },
-                    "medium_a":{
-                        "a1":"Lansing",
-                        "a2":"Springfield",
-                        "a3":"Madison",
-                        "a4":"Sacramento",
-                        "a5":"Tallahassee"
-                    },
-                    "hard":{
-                        "q1":"What is the capitol of Idaho?",
-                        "q2":"What is the capitol of North Dakota?",
-                        "q3":"What is the capitol of South Dakota?",
-                        "q4":"What is the capitol of Wyoming?",
-                        "q5":"What is the capitol of New Mexico?"
-                    },
-                    "hard_a":{
-                        "a1":"Boise",
-                        "a2":"Bismarck",
-                        "a3":"Pierre",
-                        "a4":"Cheyenne",
-                        "a5":"Santa Fe"
+                    "easy":
+                    ["What is the capitol of New York?",
+                    "What is the capitol of Oklahoma?",
+                    "What is the capitol of Massachusetts?",
+                    "What is the capitol of Texas?",
+                    "What is the capitol of Arizona?"
+                    ],
+                    "easy_a":
+                    ["Albany","Oklahoma City","Boston","Austin","Pheonix"],
+                    "easy_mc":[
+                        ["Albany","New York City","Buffalo","Syracuse"],
+                        ["Tulsa","Oklahoma City","Norman","Denton"],
+                        ["Amherst","Salem","Boston","Cambridge"],
+                        ["Dallas","Houston","Corpus Christi","Austin"],
+                        ["Pheonix","Tempe","Sedona","Flagstaff"]],
+
+                    "medium":
+                    ["What is the capitol of Michigan?",
+                    "What is the capitol of Illinois?",
+                    "What is the capitol of Wisconsin?",
+                    "What is the capitol of California?",
+                    "What is the capitol of Florida?"
+                ],
+
+                    "medium_a":["Lansing","Springfield","Madison","Sacramento","Tallahassee"],
+                    "medium_mc":[
+                        ["Detroit","Flint","Lansing","Ann Arbor"],
+                        ["Chicago","Springfield","Lake Zurich","Urbana"],
+                        ["Madison","Green Bay","Milwaukee","La Pierre"],
+                        ["Los Angeles","San Francisco","Sacramento", "San Diego"],
+                        ["Miami","Coral Gables","Orlando","Tallahassee"]],
+                    "hard":
+                        ["What is the capitol of Idaho?",
+                        "What is the capitol of North Dakota?",
+                        "What is the capitol of South Dakota?",
+                        "What is the capitol of Wyoming?",
+                        "What is the capitol of New Mexico?"],
+                    "hard_a":["Boise","Bismarck","Pierre","Cheyenne","Santa Fe"],
+                    "hard_mc":[
+                        ["Boise","Idaho Falls","Moscow","Twin Falls"],
+                        ["Fargo","Bismarck","Minot","Grand Forks"],
+                        ["Sioux Falls","Rapid City","Sturgis","Pierre"],
+                        ["Jackson","Cheyenne","Casper","Cody"],
+                        ["Albuquerque","Las Cruces","Santa Fe","Roswell"]
+                    ]
                     }
                 },
         "world_geography":{
@@ -58,57 +62,56 @@ const quiz_bank = {
             }
         }
     }
-},
+}
 
-    "economics":{
-        "micro":{
+    // "economics";{
+    //     "micro";{
     
-        },
-        "macro":{
+    //     },
+    //     "macro";{
     
-        }
+    //     }
     
-    },
-    "world_history_questions":{
-        "people":{
+    // },
+    // "world_history_questions":{
+    //     "people":{
     
-        },
-        "places":{
+    //     },
+    //     "places":{
     
-        },
-        "events":{
+    //     },
+    //     "events":{
     
-        }
-    },
-    "US_politics":{
-        "people":{},
-        "policies":{},
-        "government":{},
-        "scandals":{}
-    },
-    "US_history":{
-        "people":{
+    //     }
+    // },
+    // "US_politics":{
+    //     "people":{},
+    //     "policies":{},
+    //     "government":{},
+    //     "scandals":{}
+    // },
+    // "US_history":{
+    //     "people":{
     
-        },
-        "places":{
+    //     },
+    //     "places":{
     
-        },
-        "events":{
+    //     },
+    //     "events":{
     
-        }
-    },
-    "world_politics":{
-        "people":{},
-        "policies":{},
-        "organizations":{}
-    },
-    "sports":{
+    //     }
+    // },
+    // "world_politics":{
+    //     "people":{},
+    //     "policies":{},
+    //     "organizations":{}
+    // },
+    // "sports":{
 
-        },
-    "finance":{
+    //     },
+    // "finance":{
 
-            }
-        }
+    //         }
 
 const quiz_list=[]
 

@@ -14,7 +14,9 @@ console.log(level)
 //defines the inputs to the quizzle class object. NEED TO UPDATE THESE TO POPULATE DYNAMICALLY
 let quiz_source = quiz_bank["topic"][topic]
 let quiz_level = quiz_bank["topic"][topic]["levels"][level]
+let quiz_mc = quiz_bank["topic"][topic]["levels"][level + "_mc"]
 console.log(quiz_level)
+console.log(quiz_mc)
 
 console.log(localStorage.getItem('storedItem'))
 
@@ -24,7 +26,7 @@ function populate_quiz(){
     console.log(topic_listener);
     console.log("first function triggered")
     
-    updateQuizcard();
+    updateQuizCard();
 }
 
 //DOM items for updating quiz card
@@ -43,33 +45,61 @@ let q_counter = 0
 //gets the answer key
 let quiz_answers = quiz_bank["topic"][topic]["levels"][level + "_a"]
 console.log(quiz_answers)
-let a1 = quiz_answers['a1']
-console.log(a1);
-let b1 = quiz_answers['a2']
-let c1 = quiz_answers['a3']
-let d1 = quiz_answers['a4']
+// let a1 = quiz_answers[0]
+// console.log(a1);
+// let b1 = quiz_answers[1]
+// let c1 = quiz_answers[2]
+// let d1 = quiz_answers[3]
 
-let question_array = [quiz_level['q1'],quiz_level['q2'],quiz_level['q3'],quiz_level['q4'],quiz_level['q5']]
-let answer_array = [a1,b1,c1,d1]
+let question_array = [quiz_level[0],quiz_level[1],quiz_level[2],quiz_level[3],quiz_level[4]]
+// let answer_array = [a1,b1,c1,d1]
 
-function updateQuizcard(){
+// console.log(question_array[0])
+
+function updateQuizCard(){
     console.log(q_counter);
     q_counter +=1;
-    console.log(q_counter)
+    console.log(q_counter);
+    if (q_counter>5){
+        q_counter = 1;
+    }
+    for (let i=0;i<1;i++){
+        document.querySelector('.question_number').innerHTML = q_counter;
+    }
+    for(let k=0;k<1;k++){
+        console.log(question_array[q_counter - 1]);
+        document.querySelector('.question').innerHTML = question_array[q_counter - 1];
+    }
+    updateMultipleChoice();
+}
+
+function goBackQuestion(){
+    q_counter -=1;
+    if(q_counter<1){
+        q_counter=1;
+    }
     for (let i=0;i<=1;i++){
         document.querySelector('.question_number').innerHTML = q_counter;
-        for(let i=0;i<=5;i++){
-            document.querySelector('.question').innerHTML = question_array[i];
-            return i
-        }
     }
-    // for(let i=0;i<=5;i++){
-    //     document.querySelector('.question').innerHTML = question_array[i];
-    //     return i
-    // }
+    for(let k=0;k<=5;k++){
+        console.log(k)
+        console.log(question_array[q_counter - 1])
+        document.querySelector('.question').innerHTML = question_array[q_counter - 1];
+        return k
+    }
+    updateMultipleChoice();
 }
 
-function skipQuestion(){
+let mc_counter = 0;
+console.log(quiz_mc[0])
 
+function updateMultipleChoice(){
+    console.log("update MC triggered");
+    console.log(q_counter);
+    document.querySelector('#a').innerHTML = quiz_mc[q_counter - 1][0];
+    document.querySelector('#b').innerHTML = quiz_mc[q_counter - 1][1];
+    document.querySelector('#c').innerHTML = quiz_mc[q_counter - 1][2];
+    document.querySelector('#d').innerHTML = quiz_mc[q_counter - 1][3];
 }
+
 

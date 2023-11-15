@@ -19,34 +19,35 @@
 </header>
 
       <div class="quiz_title">Geography - State Capitols</div>
-      <div class="card_placeholder">
+      <div class="card_placeholder" onload="updateMultipleChoice()">
         <!-- <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5d9011c-e136-448c-9040-379cd392ef2c?apiKey=8ff65df25de9477fa923cc5a03d9a493&"
           class="img"
         /> -->
-        <div class="question_number">2</div>
+        <div class="question_number">1</div>
         <div class="question">What is the capital of Michigan?</div>
         <!-- Multiple Choice list -->
         <div class="answer_list">
-          <div class="answer" id="a">
-            </div>
-            <div class="answer_name">Lansing</div>
-          <div class="answer" id="b">
-            <div class="answer_name">Detroit</div>
+          <div class="answer">
+            <div class="answer_name" id="a">Lansing</div>
           </div>
-          <div class="answer" id="c">
-            <div class="answer_name">Saginaw</div>
+          <div class="answer">
+            <div class="answer_name" id="b">Detroit</div>
           </div>
-          <div class="answer" id="d">
-            <div class="answer_name">Kalamazoo</div>
+          <div class="answer">
+            <div class="answer_name" id="c">Saginaw</div>
+          </div>
+          <div class="answer">
+            <div class="answer_name" id="d">Kalamazoo</div>
           </div>
         </div>
         <!-- Buttons on the question to go back or skip -->
         <div class="forward_back_box">
-          <div class="back"><</div>
-          <div class="forward">></div>
+          <div class="back" onclick="goBackQuestion()"><</div>
+          <div class="forward" onclick="updateQuizCard()">></div>
         </div>
+        <!-- end of card placeholder -->
       </div>
       <div class="submit_container">
         <div class="submit_button">
