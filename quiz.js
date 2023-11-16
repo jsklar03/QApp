@@ -11,7 +11,7 @@ console.log(topic);
 const level = params.get('level');
 console.log(level);
 
-document.querySelector('.quiz_title').innerHTML = topic +" - "+level;
+document.querySelector('.quiz_title').innerHTML = topic +" - "+ level;
 
 //defines the inputs to the quizzle class object. 
 // sets quiz source, quiz level, quiz mc options, quiz answers
@@ -21,6 +21,12 @@ let quiz_mc = quiz_bank["topic"][topic]["levels"][level + "_mc"];
 let quiz_answers = quiz_bank["topic"][topic]["levels"][level + "_a"];
 
 // console.log(localStorage.getItem('storedItem'))
+
+let answer_a = document.querySelector('#a').innerHTML;
+let answer_b = document.querySelector('#b').innerHTML;
+let answer_c = document.querySelector('#c').innerHTML;
+let answer_d = document.querySelector('#d').innerHTML;
+console.log(answer_a,answer_b,answer_c,answer_d)
 
 //kicks off the createQuizzes function
 function populate_quiz(){
@@ -82,16 +88,12 @@ function updateMultipleChoice(){
     document.querySelector('#c').innerHTML = quiz_mc[q_counter - 1][2];
     document.querySelector('#d').innerHTML = quiz_mc[q_counter - 1][3];
     let answer_a = document.querySelector('#a').innerHTML;
+
     let answer_b = document.querySelector('#b').innerHTML;
     let answer_c = document.querySelector('#c').innerHTML;
     let answer_d = document.querySelector('#d').innerHTML;
     console.log(answer_a, answer_b, answer_c, answer_d);
 }
-let answer_a = document.querySelector('#a').innerHTML;
-let answer_b = document.querySelector('#b').innerHTML;
-let answer_c = document.querySelector('#c').innerHTML;
-let answer_d = document.querySelector('#d').innerHTML;
-console.log(answer_a,answer_b,answer_c,answer_d)
 
 //Need to do these two functions below to complete the Quiz.JS page
 function recordAnswers(){
