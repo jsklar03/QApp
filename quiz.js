@@ -1,15 +1,15 @@
 //Constants added for add to cart btn
-const queryString = window.location.search;
+// const queryString = window.location.search;
 //console.log(queryString);
 
 // Then, we use the query string to create a URLSearchParams object:
-const params = new URLSearchParams(queryString);
+// const params = new URLSearchParams(queryString);
 //console.log(params);
 
-const topic = params.get('topic');
-// console.log(topic);
-const level = params.get('level');
-// console.log(level);
+// const topic = params.get('topic');
+// // console.log(topic);
+// const level = params.get('level');
+// // console.log(level);
 
 document.querySelector('.quiz_title').innerHTML = topic.toUpperCase() +" - "+ level.toUpperCase();
 

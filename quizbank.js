@@ -275,12 +275,19 @@ const quiz_bank = {
 }
 }
 
-const quiz_list=[];
+const queryString = window.location.search;
 
-const temp_quiz_list=[];
+const params = new URLSearchParams(queryString);
+//console.log(params);
+
+const topic = params.get('topic');
+console.log(topic);
+const level = params.get('level');
+console.log(level);
 
 let user_answers = ['','','','',''];
-let real_answers = [];
+let real_answers = quiz_bank["topic"][topic]["levels"][level + "_a"];
+console.log(real_answers)
 let right_counter = 0;
 let wrong_counter = 0;
 let total_counter = 0;
@@ -291,19 +298,4 @@ else {
     let percentage = 0;
 }
 
-// class quizzle {
-//     constructor (quizTopic, quizSubTopic, quizLevel) {
-//         this.quizTopic = quizTopic;
-//         this.quizSubTopic = quizSubTopic;
-//         this.quizLevel =  quizLevel;
-//         this.quiz = (quizTopic, quizLevel)
-//         this.element = null;
-//     }
-// }
 
-// class question {
-//     constructor(question,answer){
-//         this.question= null;
-//         this.answer= null;
-//     }
-// }
