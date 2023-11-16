@@ -279,7 +279,7 @@ const quiz_list=[];
 
 const temp_quiz_list=[];
 
-let user_answers = [];
+let user_answers = ['','','','',''];
 let real_answers = [];
 let right_counter = 0;
 let wrong_counter = 0;
