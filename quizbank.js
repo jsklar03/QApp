@@ -10,6 +10,8 @@ console.log(topic);
 const level = params.get('level');
 console.log(level);
 
+const quiz_check = new Set ()
+
 const quiz_bank = {
     "topic":{
         "geography":{
@@ -182,52 +184,105 @@ const quiz_bank = {
         },
         "world_history":{
             "levels":{
-                "easy":[],
+                "easy":["What year did WWII end?",
+                "What year did WWI start?",
+                "Which Greek philosopher authored 'Homer's Illiad'?",
+                "Which Japanese President was recently assassinated?",
+                "Who led Britain during WWII?"
+                ],
                 "easy_a":[],
                 "easy_mc":[[],[],[],[],[]],
-                "medium":["Which country was NOT one of the seven countries that invaded Israel in 1948?"],
+                "medium":["Which country was NOT one of the seven countries that invaded Israel in 1948?",
+                "What ancient society was primarily composed of city-states?",
+                "Who was India's first President?",
+                "What country was Eva Peron from?",
+                "When did the Berlin Wall come down?"
+            ],
                 "medium_a":[],
                 "medium_mc":[[],[],[],[],[]],
-                "hard":[],
+                "hard":["Who came up with the concept of a social contract?",
+                "What empire ruled modern day Lebanon until 1917?",
+                "Which Gallic leader fought against Julius Ceasar?",
+                "Who led Egypt in the 1973 Yom Kippur War?",
+                "Who was Taiwan's first leader?"
+            ],
                 "hard_a":[],
                 "hard_mc":[[],[],[],[],[]]
             }
         },
         "US_politics":{
             "levels":{
-                "easy":[],
+                "easy":["What party does Barack Obama belong to?",
+                "What party does Donald Trump belong to?",
+                "Which current NY Congresswoman was previously a waitress before taking office?",
+                "Who nearly won the 2000 US Presidential Election?",
+                "Who passes bills into law?"],
                 "easy_a":[],
                 "easy_mc":[[],[],[],[],[]],
-                "medium":[],
+                "medium":["Which branch of government has 'Original Jurisdiction'?",
+                "Who nearly won the 2000 US Presidential Election?",
+                "Who is the current Secretary of State?",
+                "Which State has the most Electoral College votes?",
+                "Who is the leader of the Senate?"],
                 "medium_a":[],
                 "medium_mc":[[],[],[],[],[]],
-                "hard":[],
+                "hard":["What is the name of the legislation known as 'Obamacare?'",
+                "Which branch controls the 'power of the purse'?",
+                "What is the term length for the House and Senate?",
+                "What is the term length in the Supreme Court?",
+                "What ammendment guarantees protection from unwarranted search and seizure?"],
                 "hard_a":[],
                 "hard_mc":[[],[],[],[],[]]
             }
         },
         "world_politics":{
             "levels":{
-                "easy":[],
+                "easy":["Who is the President of Canada?",
+                "Who is the Prime Minister of the UK?",
+                "What country did Angela Merkel govern?",
+                "Which of the following countries are a democracy?",
+                "What international organization deploys Peacekeepers?"
+                ],
                 "easy_a":[],
                 "easy_mc":[[],[],[],[],[]],
-                "medium":[],
+                "medium":["What are the extremes of the political spectrum called?",
+                "Which country is NOT part of the 5 permanent members of the UN Security Council?",
+                "What is the type of democracy that elects representatives to represent the public?",
+                "Who was the most popular opposition candidate to Vladimir Putin?",
+                "Who is the current leader of India?"],
                 "medium_a":[],
                 "medium_mc":[[],[],[],[],[]],
-                "hard":[],
+                "hard":["What is it called when a minority group rules over a country's majority?",
+                "What international agreement created the State of Israel and Palestine in 1947?",
+                "What is the title of the UN's leader?",
+                "Who is the current General Secretary of the UN?",
+                "What are the two major political parties in the UK?"
+            ],
                 "hard_a":[],
                 "hard_mc":[[],[],[],[],[]]
             }
         },
         "economics":{
             "levels":{
-                "easy":[],
+                "easy":["Who came up with 'Laissez-Faire Economics?",
+                "What two curves typically make up a market?",
+                "Which direction does the Supply Curve slope?",
+                "What direction does the Demand Curve slope?",
+                "What is the relationship between price and quantity?"],
                 "easy_a":[],
                 "easy_mc":[[],[],[],[],[]],
-                "medium":[],
+                "medium":["Who controls US Monetary Policy?",
+                "Which economist championed 'supply-side' Economics?",
+                "Which economist championed 'demand-side' Economics?",
+                "What is the 'price of money'?",
+                "Who controls US Fiscal Policy?"],
                 "medium_a":[],
                 "medium_mc":[[],[],[],[],[]],
-                "hard":[],
+                "hard":["Which US political party supports 'supply-side' Economics?",
+                "What are the effects of a Tariff?",
+                "If interest rates go up, how does that effect foreign exchange rates?",
+                "If interest rates go down, what happens to Aggregate Demand?",
+                "If interest rates go down, what happens to the Stock Market?"],
                 "hard_a":[],
                 "hard_mc":[[],[],[],[],[]]
             }
@@ -247,10 +302,17 @@ const quiz_bank = {
         },
         "philosopghy":{
             "levels":{
-                "easy":[],
+                "easy":["Which Greek philosopher came up with the 'Socratic Method'?",
+                "Who said 'a wise man knows that he knows nothing'?",
+                "Which philosopher/author advocated for capitalism?",
+                "Who wrote 1984?",
+                "Who wrote Anthem?"],
                 "easy_a":[],
                 "easy_mc":[[],[],[],[],[]],
-                "medium":[],
+                "medium":["Who came up with the Theory of Relativity?",
+                "What economic concept did 'Animal Farm' criticize?",
+                "What political concept did '1984' criticize?",
+                ""],
                 "medium_a":[],
                 "medium_mc":[[],[],[],[],[]],
                 "hard":[],

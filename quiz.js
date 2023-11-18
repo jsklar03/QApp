@@ -118,16 +118,3 @@ function saveToLocalStorage(user_answers){
     console.log(storedAnswers)
   }
   
-// function retrieveFromLocalStorage() {
-//     const notecardArrayString = localStorage.getItem('storedNotes');
-//     const notecardArray = JSON.parse(notecardArrayString);
-//     for (const noteData of notecardArray) {
-//       const notecard = addNewNote(noteData.noteImageURL, noteData.noteTitle,
-//         noteData.noteBody);
-//       createElement(notecard);
-//     }
-// }
-  
-//   if (localStorage.getItem('storedNotes') != null) {
-//     retrieveFromLocalStorage();
-//   }
