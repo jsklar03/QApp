@@ -11,7 +11,7 @@
 // const level = params.get('level');
 // // console.log(level);
 
-document.querySelector('.quiz_title').innerHTML = topic.toUpperCase() +" - "+ level.toUpperCase();
+document.querySelector('.quiz_title').innerHTML = topic +" - "+ level;
 
 //defines the inputs to the quizzle class object. 
 // sets quiz source, quiz level, quiz mc options, quiz answers
@@ -45,9 +45,9 @@ let q_counter = 0;
 let question_array = [quiz_level[0],quiz_level[1],quiz_level[2],quiz_level[3],quiz_level[4]];
 
 function updateQuizCard(){
-    console.log(q_counter);
+    // console.log(q_counter);
     q_counter +=1;
-    console.log(q_counter);
+    // console.log(q_counter);
     if (q_counter>5){
         q_counter = 1;
     }
@@ -55,7 +55,7 @@ function updateQuizCard(){
         document.querySelector('.question_number').innerHTML = q_counter;
     }
     for(let k=0;k<1;k++){
-        console.log(question_array[q_counter - 1]);
+        // console.log(question_array[q_counter - 1]);
         document.querySelector('.question').innerHTML = question_array[q_counter - 1];
     }
     updateMultipleChoice();
@@ -81,7 +81,7 @@ let mc_counter = 0;
 
 function updateMultipleChoice(){
     console.log("update MC triggered");
-    console.log(q_counter);
+    // console.log(q_counter);
     document.querySelector('#a').innerHTML = quiz_mc[q_counter - 1][0];
     document.querySelector('#b').innerHTML = quiz_mc[q_counter - 1][1];
     document.querySelector('#c').innerHTML = quiz_mc[q_counter - 1][2];
@@ -94,8 +94,6 @@ function updateMultipleChoice(){
 }
 
 let selected_a = document.querySelector("#a");
-console.log(selected_a)
-console.log(selected_a.innerText)
 let selected_b = document.querySelector("#b");
 let selected_c = document.querySelector("#c");
 let selected_d = document.querySelector("#d");
@@ -110,19 +108,26 @@ selected_d.addEventListener('click', (e) => recordAnswers(e));
 function recordAnswers(e){
     user_answers[q_counter-1] = e.target.innerText;
     console.log(user_answers);
+    saveToLocalStorage(user_answers)
 }
-// console.log(user_answers)
 
-function checkAnswers(){
-    console.log(updateMultipleChoice());
-    for(let i=0, k=0;i<user_answers.length,k<real_answers.length;i++,k++){
-        total_counter+=1;
-        if (i==k){
-            right_counter+=1
-        }
-        else{
-            wrong_counter+=1
-        }
-    }
-    console.log(total_counter, right_counter, wrong_counter)
-}
+document.getElementById("submit_btn").children[0].setAttribute("href", "../quiz.html?topic="+ topic + "&level="+level);
+
+function saveToLocalStorage(user_answers){
+    localStorage.setItem(storedAnswers, user_answers);
+    console.log(storedAnswers)
+  }
+  
+// function retrieveFromLocalStorage() {
+//     const notecardArrayString = localStorage.getItem('storedNotes');
+//     const notecardArray = JSON.parse(notecardArrayString);
+//     for (const noteData of notecardArray) {
+//       const notecard = addNewNote(noteData.noteImageURL, noteData.noteTitle,
+//         noteData.noteBody);
+//       createElement(notecard);
+//     }
+// }
+  
+//   if (localStorage.getItem('storedNotes') != null) {
+//     retrieveFromLocalStorage();
+//   }

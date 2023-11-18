@@ -1,3 +1,15 @@
+let storedAnswers = [];
+
+const queryString = window.location.search;
+
+const params = new URLSearchParams(queryString);
+//console.log(params);
+
+const topic = params.get('topic');
+console.log(topic);
+const level = params.get('level');
+console.log(level);
+
 const quiz_bank = {
     "topic":{
         "geography":{
@@ -275,17 +287,8 @@ const quiz_bank = {
 }
 }
 
-const queryString = window.location.search;
-
-const params = new URLSearchParams(queryString);
-//console.log(params);
-
-const topic = params.get('topic');
-console.log(topic);
-const level = params.get('level');
-console.log(level);
-
 let user_answers = ['','','','',''];
+console.log(quiz_bank['topic'])
 let real_answers = quiz_bank["topic"][topic]["levels"][level + "_a"];
 console.log(real_answers)
 let right_counter = 0;
@@ -297,5 +300,3 @@ if (total_counter != 0){
 else {
     let percentage = 0;
 }
-
-
