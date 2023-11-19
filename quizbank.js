@@ -99,7 +99,7 @@ const quiz_bank = {
                 "What is the smallest country in the world by land mass?",
                 "What is the name of the uninhabited land between Central and South America?"],
 
-                "hard_a":["Vatican City","Andorra","Luxemburg","Vatican City",""],
+                "hard_a":["Vatican City","Andorra","Luxemburg","Vatican City","Darien Gap"],
 
                 "hard_mc":[["Monaco","Vatican City","Croatia","Luxemburg"],
                 ["Andorra","Micronesia","Luxemburg","Judea"],
@@ -169,17 +169,33 @@ const quiz_bank = {
                 ["New York","Vermont","Georgia","Florida"],
                 ["Sybil Ludington","Betsy Ross","Molly Pither","Abigail Adams"]],
 
-                "medium":[],
+                "medium":["What act freed slaves throughout the US?",
+                "Which captured German scientist helped the US win WWII against Japan?",
+                "Which US Army General was fired by Harry Truman in the Korean War?",
+                "What pioneering female pilot was seen as a symbol of feminism?",
+                "Who was the first black American to be appointed to the Supreme Court?"],
 
-                "medium_a":[],
+                "medium_a":["Emancipation Proclomation","Robert Oppenheimer","Douglas MacArthur", "Amelia Earhardt","Thurgood Marshall"],
 
-                "medium_mc":[[],[],[],[],[]],
+                "medium_mc":[["Civil Rights Act","11th Ammendment","15th Ammendment","Emancipation Proclomation"],
+                ["Wilhelm II","Robert Oppenheimer","",""],
+                ["General MacArthur","General Patton","General Westmoreland","General Adams"],
+                ["Betsy Ross","Amelia Earhardt","Thurgood Marshall", "Henrietta Lynch"],
+                ["Thurgood Marshall","Frederick Douglas","Clarence Thomas","Millard Fillmore"]],
 
-                "hard":[],
+                "hard":["Which US President died one month after taking office?",
+                "Which US President was a serial failure prior to re-joining the Military in the Civil War?",
+                "Which Constitutional Amendment gave women the right to vote?",
+                "Which US Civil Rights leader defiantly walked across the Edmunds Pettis Bridge?",
+                "Which war does the 'Gulf of Tonkin' relate to?"],
 
-                "hard_a":[],
+                "hard_a":["William Henry Harrison","Ulysses S Grant","19th","John Lewis","Vietnam"],
 
-                "hard_mc":[[],[],[],[],[]]
+                "hard_mc":[["William Henry Harrison","JFK","Abraham Lincoln","FDR"],
+                [],
+                [],
+                [],
+                []]
             }
         },
         "world_history":{
@@ -190,7 +206,7 @@ const quiz_bank = {
                 "Which Japanese President was recently assassinated?",
                 "Who led Britain during WWII?"
                 ],
-                "easy_a":[],
+                "easy_a":["1945","1914","Homer","Shinzo Abe","Winston Churchill"],
                 "easy_mc":[[],[],[],[],[]],
                 "medium":["Which country was NOT one of the seven countries that invaded Israel in 1948?",
                 "What ancient society was primarily composed of city-states?",
@@ -198,15 +214,15 @@ const quiz_bank = {
                 "What country was Eva Peron from?",
                 "When did the Berlin Wall come down?"
             ],
-                "medium_a":[],
+                "medium_a":["Turkey","Greece","Jawaharlal Nehru","Argentina","1989"],
                 "medium_mc":[[],[],[],[],[]],
-                "hard":["Who came up with the concept of a social contract?",
+                "hard":["Who was the Assassin that started WWI?",
                 "What empire ruled modern day Lebanon until 1917?",
                 "Which Gallic leader fought against Julius Ceasar?",
                 "Who led Egypt in the 1973 Yom Kippur War?",
                 "Who was Taiwan's first leader?"
             ],
-                "hard_a":[],
+                "hard_a":["Gavrilo Princip","Ottoman","Vercingetorix","Gamal Abdel Nasser","Sun Yat-sen"],
                 "hard_mc":[[],[],[],[],[]]
             }
         },
@@ -217,21 +233,21 @@ const quiz_bank = {
                 "Which current NY Congresswoman was previously a waitress before taking office?",
                 "Who nearly won the 2000 US Presidential Election?",
                 "Who passes bills into law?"],
-                "easy_a":[],
+                "easy_a":["Democratic","Republican","Alexandra Ocasio-Cortez","Al Gore","Congress"],
                 "easy_mc":[[],[],[],[],[]],
                 "medium":["Which branch of government has 'Original Jurisdiction'?",
-                "Who nearly won the 2000 US Presidential Election?",
+                "Who was the Republic nominee for the General Election in 2012?",
                 "Who is the current Secretary of State?",
                 "Which State has the most Electoral College votes?",
                 "Who is the leader of the Senate?"],
-                "medium_a":[],
+                "medium_a":["Supreme Court","Mitt Romney","Antony Blinken","California","Vice President"],
                 "medium_mc":[[],[],[],[],[]],
                 "hard":["What is the name of the legislation known as 'Obamacare?'",
                 "Which branch controls the 'power of the purse'?",
                 "What is the term length for the House and Senate?",
                 "What is the term length in the Supreme Court?",
                 "What ammendment guarantees protection from unwarranted search and seizure?"],
-                "hard_a":[],
+                "hard_a":["Affordable Care Act","Congress","2 and 6 years","Life","4th"],
                 "hard_mc":[[],[],[],[],[]]
             }
         },
@@ -243,14 +259,14 @@ const quiz_bank = {
                 "Which of the following countries are a democracy?",
                 "What international organization deploys Peacekeepers?"
                 ],
-                "easy_a":[],
+                "easy_a":["Justin Trudeau","Rishi Sunak","Germany","France","United Nations"],
                 "easy_mc":[[],[],[],[],[]],
                 "medium":["What are the extremes of the political spectrum called?",
                 "Which country is NOT part of the 5 permanent members of the UN Security Council?",
                 "What is the type of democracy that elects representatives to represent the public?",
                 "Who was the most popular opposition candidate to Vladimir Putin?",
                 "Who is the current leader of India?"],
-                "medium_a":[],
+                "medium_a":["Communism and Facism","Germany","Republican","Alexei Navalny","Narendra Modi"],
                 "medium_mc":[[],[],[],[],[]],
                 "hard":["What is it called when a minority group rules over a country's majority?",
                 "What international agreement created the State of Israel and Palestine in 1947?",
@@ -258,7 +274,7 @@ const quiz_bank = {
                 "Who is the current General Secretary of the UN?",
                 "What are the two major political parties in the UK?"
             ],
-                "hard_a":[],
+                "hard_a":["Apartheid","UN Resolution 292","General Secretary","Antonio Guteres","Labour and Conservative"],
                 "hard_mc":[[],[],[],[],[]]
             }
         },
@@ -266,36 +282,48 @@ const quiz_bank = {
             "levels":{
                 "easy":["Who came up with 'Laissez-Faire Economics?",
                 "What two curves typically make up a market?",
-                "Which direction does the Supply Curve slope?",
-                "What direction does the Demand Curve slope?",
+                "Which direction does the Supply Curve slope with respect to Price and Quantity?",
+                "What direction does the Demand Curve slope with respect to Price and Quantity?",
                 "What is the relationship between price and quantity?"],
-                "easy_a":[],
+                "easy_a":["Adam Smith","Supply and Demand","Upward","Downward","Inverse"],
                 "easy_mc":[[],[],[],[],[]],
                 "medium":["Who controls US Monetary Policy?",
                 "Which economist championed 'supply-side' Economics?",
                 "Which economist championed 'demand-side' Economics?",
                 "What is the 'price of money'?",
                 "Who controls US Fiscal Policy?"],
-                "medium_a":[],
+                "medium_a":["Federal Reserve","Milton Friedman","John Maynard Keynes","Interest Rate","Federal Government"],
                 "medium_mc":[[],[],[],[],[]],
                 "hard":["Which US political party supports 'supply-side' Economics?",
                 "What are the effects of a Tariff?",
-                "If interest rates go up, how does that effect foreign exchange rates?",
+                "If interest rates go up in a country how does that effect their foreign exchange rates?",
                 "If interest rates go down, what happens to Aggregate Demand?",
                 "If interest rates go down, what happens to the Stock Market?"],
-                "hard_a":[],
+                "hard_a":["Republicans","Deadweight Loss","Domestic Currency Strengthens","Increases","Prices Go Up"],
                 "hard_mc":[[],[],[],[],[]]
             }
         },
         "finance":{
             "levels":{
-                "easy":[],
+                "easy":["What are the two major asset classes?",
+                "What is the asset class does a bond belong to?",
+                "What asset class does a Common Stock belong to?",
+                "What is the name of the largest Stock Exchange?",
+                "What does ETF stand for?"],
                 "easy_a":[],
                 "easy_mc":[[],[],[],[],[]],
-                "medium":[],
+                "medium":["What measures a bond's price sensitivity to interest rates?",
+                "Which of the following are multiplied to determine Market Value?",
+                "What asset class do Preferred Stocks belong to?",
+                "Is a warrant an Equity or Fixed Income instrument?",
+                "What is the term for bonds issued by local governments?"],
                 "medium_a":[],
                 "medium_mc":[[],[],[],[],[]],
-                "hard":[],
+                "hard":["Which of the following is not a security identifier?",
+                "Would you 'Call' ot 'Put' a stock that you believe will go down?",
+                "Would you go 'Long' or 'Short' a stock that you think will go up?",
+                "What happens when an investor is forced to buy shares at a high price to pay back their short?",
+                "Which of the following is not a US-based Stock Market?"],
                 "hard_a":[],
                 "hard_mc":[[],[],[],[],[]]
             }
@@ -307,41 +335,87 @@ const quiz_bank = {
                 "Which philosopher/author advocated for capitalism?",
                 "Who wrote 1984?",
                 "Who wrote Anthem?"],
-                "easy_a":[],
-                "easy_mc":[[],[],[],[],[]],
+
+                "easy_a":["Socrates","Socrates","Ayn Rand","George Orwell","Ayn Rand"],
+
+                "easy_mc":[["Socrates","Homer","Plato","Aristotle"],
+                ["Socrates","Homer","Plato","Aristotle"],
+                ["Ayn Rand","Karl Marx","Vladimir Lenin","Leon Trotsky"],
+                ["Ayn Rand", "George Orwell","Karl Marx","Michel Foucault"],
+                ["Ayn Rand","George Orwell", "Karl Marx","Michel Foucault"]],
+
                 "medium":["Who came up with the Theory of Relativity?",
                 "What economic concept did 'Animal Farm' criticize?",
                 "What political concept did '1984' criticize?",
-                ""],
-                "medium_a":[],
-                "medium_mc":[[],[],[],[],[]],
-                "hard":[],
+                "What are the two major Economic philosophies?",
+                "Who came up with the concept of a social contract?"],
+
+                "medium_a":["Albert Einstein","Communism","Totalitarianism","Communism and Capitalism","John Locke"],
+            
+                "medium_mc":[["Isaac Newton","Tycho Brahe","Albert Einstein","Leonardo da Vinci"],
+                ["Capitalism","Communism","Socialism","Jingoism"],
+                ["Totalitarianism","Monarchy","Fascism","Demoracy"],
+                ["Capitalism and Socialism","Capitalism and Communism", "Communism and Fascism","Anarchism and Fascism"],
+                ["Macchiavelli","John Locke","Michel Foucault","Emile Durkheim"]],
+
+                "hard":["What relationship does the social contract seek to explain?",
+                "Which philosopher published on 'Collective Effervescence'?",
+                "What philosopher explored the relationship between workers and capital?",
+                "Which economic philosopher inspired Charles Darwin's theory of Natural Selection?",
+                "Which Holocaust surviver, author and philosopher focuses on genocide?"],
+
                 "hard_a":[],
+
                 "hard_mc":[[],[],[],[],[]]
             }
         },
         "sports":{
             "levels":{
-                "easy":[],
+                "easy":["Which sport is not one of the major four in the US?",
+                "What is 'soccer' called in non-US countries?",
+                "Which of the following is played on ice?",
+                "Which sport has a quarterback position?",
+                "Which of these sports does NOT have a goalie?"],
                 "easy_a":[],
                 "easy_mc":[[],[],[],[],[]],
-                "medium":[],
+                "medium":["How many teams make the NCAA Tournament?",
+                "How many teams make the College Football Playoff?",
+                "What is the tournament that determines 'the best football club in Europe'?",
+                "What is the game prior to the Superbowl called?",
+                "Which of these cities do NOT have two professional baseball teams?"],
                 "medium_a":[],
                 "medium_mc":[[],[],[],[],[]],
-                "hard":[],
+                "hard":["What is the name of the Superbowl Trophy?",
+                "Which of these sports involves penalties where one team loses a player temporarily?",
+                "What is the official name of a shot in basketall?",
+                "What is Fenway Park famous for?",
+                "What position is typically shorter and handles the ball the most in basketball?"],
                 "hard_a":[],
                 "hard_mc":[[],[],[],[],[]]
             }
         },
-        "music":{
+        "movies":{
             "levels":{
-                "easy":[],
+                "easy":["What is the name of the movie series based on animated toys?",
+                "What is the name of the 2005 movie featuring animated penguins, lemurs and lions?",
+                "What movie series is based on a boy wizard in Britain?",
+                "What move is 'Here's Johnny' from?",
+                "What children's movie features a green animated ogre?"],
                 "easy_a":[],
                 "easy_mc":[[],[],[],[],[]],
-                "medium":[],
+                "medium":["What WWII movie was Tom Hanks a main character in?",
+                "What 'Coming of Age' movie features a character named Benny 'The Jet' Rodriguez?",
+                "What 80's movie features a group of different teens bonding in detention?",
+                "What Leonardo Dicapprio movie features a young Margot Robie?",
+                "What fictional character did Gal Gadot play?"
+                ],
                 "medium_a":[],
                 "medium_mc":[[],[],[],[],[]],
-                "hard":[],
+                "hard":["What movie is based on Harper Lee's book?",
+                "What movie features a group of four young friends who die in WWI serving the Keiser?",
+                "What Vietnam movie features Charlie Sheen?",
+                "What 2000's movie focuses on the dystopian impacts of Climate Change?",
+                "Which Boston based movie features Matt Damon as a corrupt police officer?"],
                 "hard_a":[],
                 "hard_mc":[[],[],[],[],[]]
             }
