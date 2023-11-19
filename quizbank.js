@@ -364,7 +364,7 @@ const quiz_bank = {
                 "Which economic philosopher inspired Charles Darwin's theory of Natural Selection?",
                 "Which Holocaust surviver, author and philosopher focuses on genocide?"],
 
-                "hard_a":[],
+                "hard_a":["John Locke","Emile Durkheim","Karl Marx","Thomas Malthus","Ellie Weisel"],
 
                 "hard_mc":[[],[],[],[],[]]
             }
@@ -401,7 +401,7 @@ const quiz_bank = {
                 "What movie series is based on a boy wizard in Britain?",
                 "What move is 'Here's Johnny' from?",
                 "What children's movie features a green animated ogre?"],
-                "easy_a":[],
+                "easy_a":["Toy Story","Madagascar","Harry Potter","The Shining","Shrek"],
                 "easy_mc":[[],[],[],[],[]],
                 "medium":["What WWII movie was Tom Hanks a main character in?",
                 "What 'Coming of Age' movie features a character named Benny 'The Jet' Rodriguez?",
@@ -409,14 +409,14 @@ const quiz_bank = {
                 "What Leonardo Dicapprio movie features a young Margot Robie?",
                 "What fictional character did Gal Gadot play?"
                 ],
-                "medium_a":[],
+                "medium_a":["Saving Private Ryan","Sandlot","Breakfast Club","Wolf of Wall Street","Wonder Woman"],
                 "medium_mc":[[],[],[],[],[]],
                 "hard":["What movie is based on Harper Lee's book?",
                 "What movie features a group of four young friends who die in WWI serving the Keiser?",
                 "What Vietnam movie features Charlie Sheen?",
                 "What 2000's movie focuses on the dystopian impacts of Climate Change?",
                 "Which Boston based movie features Matt Damon as a corrupt police officer?"],
-                "hard_a":[],
+                "hard_a":["To Kill a Mockingbird","All Quiet on the Western Front","Platoon","The Day After Tomorrow","The Departed"],
                 "hard_mc":[[],[],[],[],[]]
             }
         }
