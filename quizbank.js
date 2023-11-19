@@ -1,16 +1,15 @@
 let storedAnswers = [];
 
-const queryString = window.location.search;
-
-const params = new URLSearchParams(queryString);
-//console.log(params);
-
-const topic = params.get('topic');
-console.log(topic);
-const level = params.get('level');
-console.log(level);
-
-const quiz_check = new Set ()
+let right_counter = 0;
+let wrong_counter = 0;
+let total_counter = 0;
+let percentage = 0;
+if (total_counter != 0){
+    percentage = (right_counter/total_counter);
+}
+else {
+    percentage = 0;
+}
 
 const quiz_bank = {
     "topic":{
@@ -457,22 +456,32 @@ const quiz_bank = {
 }
 }
 
+const queryString = window.location.search;
+
+const params = new URLSearchParams(queryString);
+//console.log(params);
+
+const topic = params.get('topic');
+console.log(topic);
+const level = params.get('level');
+console.log(level);
+
 let user_answers = ['','','','',''];
-console.log(quiz_bank['topic'])
+console.log(quiz_bank["topic"][topic])
 let real_answers = quiz_bank["topic"][topic]["levels"][level + "_a"];
 console.log(real_answers)
-let questions = quiz_bank["topic"][topic]["levels"][level]
+let questions = quiz_bank["topic"][topic]["levels"][level];
 let category = topic;
-let right_counter = 0;
-let wrong_counter = 0;
-let total_counter = 0;
-let percentage = 0;
-if (total_counter != 0){
-    percentage = (right_counter/total_counter);
-}
-else {
-    percentage = 0;
-}
+// let right_counter = 0;
+// let wrong_counter = 0;
+// let total_counter = 0;
+// let percentage = 0;
+// if (total_counter != 0){
+//     percentage = (right_counter/total_counter);
+// }
+// else {
+//     percentage = 0;
+// }
 
 class AnswerSet {
     constructor (user_answers,real_answers,questions,category,quiz_level){

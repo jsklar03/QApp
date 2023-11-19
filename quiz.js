@@ -120,7 +120,6 @@ function saveToLocalStorage(user_answers){
     stored_answers.questions = questions;
     stored_answers.category = topic;
     stored_answers.quiz_level = level;
-    localStorage.setItem(storedAnswers, user_answers);
-    console.log(storedAnswers)
+    localStorage.setItem('storedAnswers', user_answers);
   }
   
