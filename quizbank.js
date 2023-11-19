@@ -237,7 +237,11 @@ const quiz_bank = {
             ],
                 "hard_a":["Gavrilo Princip","Ottoman","Vercingetorix","Gamal Abdel Nasser","Sun Yat-sen"],
 
-                "hard_mc":[[],[],[],[],[]]
+                "hard_mc":[["Kaiser Wilhelm","Gavrilo Princip","Archduke Ferdinand","Augustus Acensio"],
+                ["French","British","Spanish","Ottoman"],
+                ["Vercingetorix","Xerxes","Joan of Arc","Josephus"],
+                ["Anwar Sadat","Gamal Abdel Nasser","Muammar Gadafi","Bashar Al-Asad"],
+                ["Sun Yat-sen","Chang Kai Shek","Mao Zedong","Deng Xiaoping"]]
             }
         },
         "US_politics":{
@@ -246,11 +250,15 @@ const quiz_bank = {
                 "What party does Donald Trump belong to?",
                 "Which current NY Congresswoman was previously a waitress before taking office?",
                 "Who nearly won the 2000 US Presidential Election?",
-                "Who passes bills into law?"],
+                "Who passes bills into law for review by the President?"],
 
                 "easy_a":["Democratic","Republican","Alexandra Ocasio-Cortez","Al Gore","Congress"],
                 
-                "easy_mc":[[],[],[],[],[]],
+                "easy_mc":[["Democratic","Republican","Libertarian","Green Party"],
+                ["Democratic","Republican","Libertarian","Green Party"],
+                ["Hillary Clinton","Alexandra Ocasio-Cortez","Nancy Pelosi","Debbie Dingell"],
+                ["Al Gore","John Kerry","Jeb Bush","Michael Dukakis"],
+                ["Senate","House of Representatives","Vice President","Supreme Court"]],
 
                 "medium":["Which branch of government has 'Original Jurisdiction'?",
                 "Who was the Republic nominee for the General Election in 2012?",
@@ -260,7 +268,11 @@ const quiz_bank = {
 
                 "medium_a":["Supreme Court","Mitt Romney","Antony Blinken","California","Vice President"],
                 
-                "medium_mc":[[],[],[],[],[]],
+                "medium_mc":[["Senate","House of Representatives","Executive","Supreme Court"],
+                ["Mitt Romney","John McCain","Paul Ryan","Sarah Palin"],
+                ["John Kerry","Hillary Clinton","Antony Blinken","Condeleza Rice"],
+                ["California","Texas","New York","Florida"],
+                ["President","Speaker of the House","Vice President","Secretary of State"]],
 
                 "hard":["What is the name of the legislation known as 'Obamacare?'",
                 "Which branch controls the 'power of the purse'?",
@@ -457,4 +469,16 @@ if (total_counter != 0){
 }
 else {
     let percentage = 0;
+}
+
+class AnswerSet {
+    constructor (user_answers,real_answers,questions,category,quiz_level){
+        this.user_answers = user_answers;
+        this.real_answers = real_answers;
+        this.questions = questions;
+        this.category = topic;
+        this.quiz_level = level;
+        this.element = null;
+    }
+
 }
