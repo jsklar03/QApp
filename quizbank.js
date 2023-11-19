@@ -178,7 +178,7 @@ const quiz_bank = {
                 "medium_a":["Emancipation Proclomation","Robert Oppenheimer","Douglas MacArthur", "Amelia Earhardt","Thurgood Marshall"],
 
                 "medium_mc":[["Civil Rights Act","11th Ammendment","15th Ammendment","Emancipation Proclomation"],
-                ["Wilhelm II","Robert Oppenheimer","",""],
+                ["Wilhelm II","Robert Oppenheimer","George Scholz","John Steinbeck"],
                 ["General MacArthur","General Patton","General Westmoreland","General Adams"],
                 ["Betsy Ross","Amelia Earhardt","Thurgood Marshall", "Henrietta Lynch"],
                 ["Thurgood Marshall","Frederick Douglas","Clarence Thomas","Millard Fillmore"]],
@@ -192,10 +192,10 @@ const quiz_bank = {
                 "hard_a":["William Henry Harrison","Ulysses S Grant","19th","John Lewis","Vietnam"],
 
                 "hard_mc":[["William Henry Harrison","JFK","Abraham Lincoln","FDR"],
-                [],
-                [],
-                [],
-                []]
+                ["William Sherman","Ulysses S Grant","General Burnside","Abraham Lincoln"],
+                ["13th","14th","20th","19th"],
+                ["MLK","Malcolm X","John Lewis","Rosa Parks"],
+                ["WWII","Korean War","War of 1812","Vietnam"]]
             }
         },
         "world_history":{
@@ -204,10 +204,17 @@ const quiz_bank = {
                 "What year did WWI start?",
                 "Which Greek philosopher authored 'Homer's Illiad'?",
                 "Which Japanese President was recently assassinated?",
-                "Who led Britain during WWII?"
+                "Who led Britain during the end of WWII?"
                 ],
+
                 "easy_a":["1945","1914","Homer","Shinzo Abe","Winston Churchill"],
-                "easy_mc":[[],[],[],[],[]],
+
+                "easy_mc":[["1918","1944","1946","1945"],
+                ["1913","1914","1917","1918"],
+                ["Odysseus","Aristotle","Plato","Homer"],
+                ["Shinzo Abe","Fumio Kashida","Akira Amari","Hiruhito Nakamura"],
+                ["Winston Churchill","Neville Chamberlain","Cassius Winston","John Brown"]],
+
                 "medium":["Which country was NOT one of the seven countries that invaded Israel in 1948?",
                 "What ancient society was primarily composed of city-states?",
                 "Who was India's first President?",
@@ -215,7 +222,13 @@ const quiz_bank = {
                 "When did the Berlin Wall come down?"
             ],
                 "medium_a":["Turkey","Greece","Jawaharlal Nehru","Argentina","1989"],
-                "medium_mc":[[],[],[],[],[]],
+
+                "medium_mc":[["Iraq","Turkey","Lebanon","Transjordan"],
+                ["Rome","Greece","Ottoman","Persian"],
+                ["Mahatma Ghandi","Indira Ghandi","Jawaharlal Nehru","Narendra Modi"],
+                ["Mexico","Spain","Chile","Argentina"],
+                ["1989","1990","1992","1995"]],
+
                 "hard":["Who was the Assassin that started WWI?",
                 "What empire ruled modern day Lebanon until 1917?",
                 "Which Gallic leader fought against Julius Ceasar?",
@@ -223,6 +236,7 @@ const quiz_bank = {
                 "Who was Taiwan's first leader?"
             ],
                 "hard_a":["Gavrilo Princip","Ottoman","Vercingetorix","Gamal Abdel Nasser","Sun Yat-sen"],
+
                 "hard_mc":[[],[],[],[],[]]
             }
         },
@@ -233,21 +247,29 @@ const quiz_bank = {
                 "Which current NY Congresswoman was previously a waitress before taking office?",
                 "Who nearly won the 2000 US Presidential Election?",
                 "Who passes bills into law?"],
+
                 "easy_a":["Democratic","Republican","Alexandra Ocasio-Cortez","Al Gore","Congress"],
+                
                 "easy_mc":[[],[],[],[],[]],
+
                 "medium":["Which branch of government has 'Original Jurisdiction'?",
                 "Who was the Republic nominee for the General Election in 2012?",
                 "Who is the current Secretary of State?",
                 "Which State has the most Electoral College votes?",
                 "Who is the leader of the Senate?"],
+
                 "medium_a":["Supreme Court","Mitt Romney","Antony Blinken","California","Vice President"],
+                
                 "medium_mc":[[],[],[],[],[]],
+
                 "hard":["What is the name of the legislation known as 'Obamacare?'",
                 "Which branch controls the 'power of the purse'?",
                 "What is the term length for the House and Senate?",
                 "What is the term length in the Supreme Court?",
                 "What ammendment guarantees protection from unwarranted search and seizure?"],
+                
                 "hard_a":["Affordable Care Act","Congress","2 and 6 years","Life","4th"],
+                
                 "hard_mc":[[],[],[],[],[]]
             }
         },
@@ -310,21 +332,21 @@ const quiz_bank = {
                 "What asset class does a Common Stock belong to?",
                 "What is the name of the largest Stock Exchange?",
                 "What does ETF stand for?"],
-                "easy_a":[],
+                "easy_a":["Equity and Fixed Income","Fixed Income","Equity","New York Stock Exchange","Exchange Traded Fund"],
                 "easy_mc":[[],[],[],[],[]],
                 "medium":["What measures a bond's price sensitivity to interest rates?",
                 "Which of the following are multiplied to determine Market Value?",
                 "What asset class do Preferred Stocks belong to?",
                 "Is a warrant an Equity or Fixed Income instrument?",
                 "What is the term for bonds issued by local governments?"],
-                "medium_a":[],
+                "medium_a":["Duration","Price and Outstanding Shares","Equity","Equity","Munis"],
                 "medium_mc":[[],[],[],[],[]],
                 "hard":["Which of the following is not a security identifier?",
                 "Would you 'Call' ot 'Put' a stock that you believe will go down?",
                 "Would you go 'Long' or 'Short' a stock that you think will go up?",
                 "What happens when an investor is forced to buy shares at a high price to pay back their short?",
                 "Which of the following is not a US-based Stock Market?"],
-                "hard_a":[],
+                "hard_a":["Security Name","Put","Long","Short Squeeze","TOPIX"],
                 "hard_mc":[[],[],[],[],[]]
             }
         },
@@ -376,21 +398,21 @@ const quiz_bank = {
                 "Which of the following is played on ice?",
                 "Which sport has a quarterback position?",
                 "Which of these sports does NOT have a goalie?"],
-                "easy_a":[],
+                "easy_a":["F1","Football","Hockey","Football","Baseball"],
                 "easy_mc":[[],[],[],[],[]],
                 "medium":["How many teams make the NCAA Tournament?",
                 "How many teams make the College Football Playoff?",
                 "What is the tournament that determines 'the best football club in Europe'?",
                 "What is the game prior to the Superbowl called?",
                 "Which of these cities do NOT have two professional baseball teams?"],
-                "medium_a":[],
+                "medium_a":["68","4","UEFA Champions Cup","Conference Championship","Miami"],
                 "medium_mc":[[],[],[],[],[]],
                 "hard":["What is the name of the Superbowl Trophy?",
                 "Which of these sports involves penalties where one team loses a player temporarily?",
                 "What is the official name of a shot in basketall?",
                 "What is Fenway Park famous for?",
                 "What position is typically shorter and handles the ball the most in basketball?"],
-                "hard_a":[],
+                "hard_a":["The Lombardi Trophy","Hockey","Field Goal","Green Monster","Point Guard"],
                 "hard_mc":[[],[],[],[],[]]
             }
         },
