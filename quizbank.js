@@ -461,14 +461,17 @@ let user_answers = ['','','','',''];
 console.log(quiz_bank['topic'])
 let real_answers = quiz_bank["topic"][topic]["levels"][level + "_a"];
 console.log(real_answers)
+let questions = quiz_bank["topic"][topic]["levels"][level]
+let category = topic;
 let right_counter = 0;
 let wrong_counter = 0;
 let total_counter = 0;
+let percentage = 0;
 if (total_counter != 0){
-    let percentage = (right_counter/total_counter);
+    percentage = (right_counter/total_counter);
 }
 else {
-    let percentage = 0;
+    percentage = 0;
 }
 
 class AnswerSet {

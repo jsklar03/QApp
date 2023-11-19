@@ -114,7 +114,12 @@ function recordAnswers(e){
 document.getElementById("submit_btn").children[0].setAttribute("href", "../quiz.html?topic="+ topic + "&level="+level);
 
 function saveToLocalStorage(user_answers){
-    let stored_answer = new AnswerSet();
+    let stored_answers = new AnswerSet(user_answers,real_answers,questions,category,quiz_level);
+    stored_answers.user_answers = user_answers;
+    stored_answers.real_answers = real_answers;
+    stored_answers.questions = questions;
+    stored_answers.category = topic;
+    stored_answers.quiz_level = level;
     localStorage.setItem(storedAnswers, user_answers);
     console.log(storedAnswers)
   }
