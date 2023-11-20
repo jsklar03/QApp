@@ -1,9 +1,12 @@
 let storedAnswers = [];
 
+
 let right_counter = 0;
 let wrong_counter = 0;
 let total_counter = 0;
 let percentage = 0;
+let scores = [total_counter,right_counter,wrong_counter];
+
 if (total_counter != 0){
     percentage = (right_counter/total_counter);
 }
@@ -292,13 +295,17 @@ const quiz_bank = {
 
                 "hard":["What is the name of the legislation known as 'Obamacare?'",
                 "Which branch controls the 'power of the purse'?",
-                "What is the term length for the House and Senate?",
+                "The term for the House and Senate is how many years respectively?",
                 "What is the term length in the Supreme Court?",
                 "What ammendment guarantees protection from unwarranted search and seizure?"],
                 
-                "hard_a":["Affordable Care Act","Congress","2 and 6 years","Life","4th"],
+                "hard_a":["Affordable Care Act","Legislative","2 and 6 years","Life","4th"],
                 
-                "hard_mc":[[],[],[],[],[]]
+                "hard_mc":[["Affordable Care Act","Public Health Act","Affordable Health Act","Affordable Healthcare Act"],
+                ["Executive","Legislative","Judicial","Press"],
+                ["4 and 4","6 and 2","2 and 6","Life"],
+                ["4 and 4","6 and 2","2 and 6","Life"],
+                ["1st","4th","5th","14th"]]
             }
         },
         "world_politics":{
@@ -309,15 +316,29 @@ const quiz_bank = {
                 "Which of the following countries are a democracy?",
                 "What international organization deploys Peacekeepers?"
                 ],
+
                 "easy_a":["Justin Trudeau","Rishi Sunak","Germany","France","United Nations"],
-                "easy_mc":[[],[],[],[],[]],
+
+                "easy_mc":[["Wayne Gretzky","Gordie Howe","Justin Trudeau","Tim Horton"],
+                ["Tony Blair","David Cameron","Gordon Brown","Rishi Sunak"],
+                ["France","Netherlands","Germany","UK"],
+                ["Afghanistan","North Korea","Thailand","UK"],
+                ["World Econominc Forum","unicef","United Nations","International Military Fund"]],
+
                 "medium":["What are the extremes of the political spectrum called?",
                 "Which country is NOT part of the 5 permanent members of the UN Security Council?",
                 "What is the type of democracy that elects representatives to represent the public?",
                 "Who was the most popular opposition candidate to Vladimir Putin?",
                 "Who is the current leader of India?"],
+
                 "medium_a":["Communism and Facism","Germany","Republican","Alexei Navalny","Narendra Modi"],
-                "medium_mc":[[],[],[],[],[]],
+                
+                "medium_mc":[["Capitalism and Communism","Capitalism and Fascism","Communism and Facism","Democracy and Dictatorship"],
+                ["Japan","USA","China","France"],
+                ["Pure Democracy","Authoritarian","Republican","Democratic"],
+                ["Alexander Lukashenko","Alexei Navalny","Yvgeny Prygozhin","Dmitry Medvedev"],
+                ["Indira Ghandi","Jawaharlal Nehru","Rishi Sunak","Narendra Modi"]],
+                
                 "hard":["What is it called when a minority group rules over a country's majority?",
                 "What international agreement created the State of Israel and Palestine in 1947?",
                 "What is the title of the UN's leader?",
@@ -325,7 +346,11 @@ const quiz_bank = {
                 "What are the two major political parties in the UK?"
             ],
                 "hard_a":["Apartheid","UN Resolution 292","General Secretary","Antonio Guteres","Labour and Conservative"],
-                "hard_mc":[[],[],[],[],[]]
+                "hard_mc":[["Apartheid","Communism","Fascism","Jingoism"],
+                ["Arab-Israeli Treaty","British Mandata 791","Independence Declaration","UN Resolution 292"],
+                ["Admiral","Chancellor","General Secretary","President"],
+                ["Kofe Anan","Hiro Shu","Gavrilo Princip","Antonio Guteres"],
+                ["Democrat and Republican","Communism and Fascism","Labour and Conservative","Tories and Whigs"]]
             }
         },
         "economics":{
@@ -335,22 +360,42 @@ const quiz_bank = {
                 "Which direction does the Supply Curve slope with respect to Price and Quantity?",
                 "What direction does the Demand Curve slope with respect to Price and Quantity?",
                 "What is the relationship between price and quantity?"],
+
                 "easy_a":["Adam Smith","Supply and Demand","Upward","Downward","Inverse"],
-                "easy_mc":[[],[],[],[],[]],
+
+                "easy_mc":[["Adam Smith","Charles Darwin","Karl Marx","Thomas Malthus"],
+                ["Demand and Production","Demand and Price","Price and Cost","Supply and Demand"],
+                ["East","Downward","Upward","West"],
+                ["East","Downward","Upward","West"],
+                ["Correlated","Inverse","No relationship","Covariance"]],
+
                 "medium":["Who controls US Monetary Policy?",
                 "Which economist championed 'supply-side' Economics?",
                 "Which economist championed 'demand-side' Economics?",
                 "What is the 'price of money'?",
                 "Who controls US Fiscal Policy?"],
+
                 "medium_a":["Federal Reserve","Milton Friedman","John Maynard Keynes","Interest Rate","Federal Government"],
-                "medium_mc":[[],[],[],[],[]],
+
+                "medium_mc":[["Central Bank","Congress","Federal Reserve","President"],
+                ["Adam Smith","John Maynard Keynes","Milton Freidman","Thomas Malthus"],
+                ["Adam Smith","John Maynard Keynes","Milton Freidman","Thomas Malthus"],
+                ["Exchange Rate","Interest Rate","Price","Quantity Supplied"],
+                ["Central Bank","Federal Government","Federal Reserve","President"]],
+
                 "hard":["Which US political party supports 'supply-side' Economics?",
                 "What are the effects of a Tariff?",
                 "If interest rates go up in a country how does that effect their foreign exchange rates?",
                 "If interest rates go down, what happens to Aggregate Demand?",
                 "If interest rates go down, what happens to the Stock Market?"],
+
                 "hard_a":["Republicans","Deadweight Loss","Domestic Currency Strengthens","Increases","Prices Go Up"],
-                "hard_mc":[[],[],[],[],[]]
+                
+                "hard_mc":[["Democrats","Libertarians","Green Party","Republicans"],
+                ["Deadweight Loss","Fees","Price Equilibrium","Subsidy"],
+                ["Domestic Currency Weakens","Domesitc Currency Strengthens","Foreign Currency Strengthens","No Impact"],
+                ["Deprecates","Falls","Increases","No Impact"],
+                ["Prices Go Down","Prices Go Up","Interest Rates Go Up","No Impact"]]
             }
         },
         "finance":{
@@ -360,21 +405,33 @@ const quiz_bank = {
                 "What asset class does a Common Stock belong to?",
                 "What is the name of the largest Stock Exchange?",
                 "What does ETF stand for?"],
+
                 "easy_a":["Equity and Fixed Income","Fixed Income","Equity","New York Stock Exchange","Exchange Traded Fund"],
-                "easy_mc":[[],[],[],[],[]],
+                
+                "easy_mc":[["Dollars and Cents","Equity and Alternatives","Equity and Fixed Income","Equity and Derivatives"],
+                ["Derivatives","Equity","Fixed Income","Options"],
+                ["Derivatives","Equity","Fixed Income","Options"],
+                ["Dow Jones","London Stock Exchange","NASDAQ","New York Stock Exchange"],
+                ["Equity Traded Fund","Equity Trust Fund","Exchange Traded Fees","Exchange Traded Fund"]],
+                
                 "medium":["What measures a bond's price sensitivity to interest rates?",
                 "Which of the following are multiplied to determine Market Value?",
                 "What asset class do Preferred Stocks belong to?",
                 "Is a warrant an Equity or Fixed Income instrument?",
                 "What is the term for bonds issued by local governments?"],
+                
                 "medium_a":["Duration","Price and Outstanding Shares","Equity","Equity","Munis"],
+                
                 "medium_mc":[[],[],[],[],[]],
+                
                 "hard":["Which of the following is not a security identifier?",
                 "Would you 'Call' ot 'Put' a stock that you believe will go down?",
                 "Would you go 'Long' or 'Short' a stock that you think will go up?",
                 "What happens when an investor is forced to buy shares at a high price to pay back their short?",
                 "Which of the following is not a US-based Stock Market?"],
+                
                 "hard_a":["Security Name","Put","Long","Short Squeeze","TOPIX"],
+                
                 "hard_mc":[[],[],[],[],[]]
             }
         },
@@ -426,22 +483,42 @@ const quiz_bank = {
                 "Which of the following is played on ice?",
                 "Which sport has a quarterback position?",
                 "Which of these sports does NOT have a goalie?"],
+
                 "easy_a":["F1","Football","Hockey","Football","Baseball"],
-                "easy_mc":[[],[],[],[],[]],
+
+                "easy_mc":[["Football","Basketball","Baseball","F1"],
+                ["EuroSoccer","Football","Baseball","Handball"],
+                ["Hockey","Soccer","Basketball","Baseball"],
+                ["Baseball","Basketball","Hockey","Football"],
+                ["Baseball","Hockey","Handball","Soccer"]],
+
                 "medium":["How many teams make the NCAA Tournament?",
                 "How many teams make the College Football Playoff?",
                 "What is the tournament that determines 'the best football club in Europe'?",
                 "What is the game prior to the Superbowl called?",
                 "Which of these cities do NOT have two professional baseball teams?"],
+
                 "medium_a":["68","4","UEFA Champions Cup","Conference Championship","Miami"],
-                "medium_mc":[[],[],[],[],[]],
+
+                "medium_mc":[["4","16","64","68"],
+                ["4","16","64","68"],
+                ["El Clasico","UEFA Champions Cup","Barclay's Cup","Stanley Cup"],
+                ["Wildcard Round","Divisional Playoff","Conference Championship","Mini-Superbowl"],
+                ["Chicago","New York","Los Angeles","Miami"]],
+
                 "hard":["What is the name of the Superbowl Trophy?",
                 "Which of these sports involves penalties where one team loses a player temporarily?",
                 "What is the official name of a shot in basketall?",
                 "What is Fenway Park famous for?",
                 "What position is typically shorter and handles the ball the most in basketball?"],
-                "hard_a":["The Lombardi Trophy","Hockey","Field Goal","Green Monster","Point Guard"],
-                "hard_mc":[[],[],[],[],[]]
+
+                "hard_a":["Lombardi Trophy","Hockey","Field Goal","Green Monster","Point Guard"],
+
+                "hard_mc":[["Lamar Hunt Trophy","Stanley Cup","Lombardi Trophy","A.C. Hall Trophy"],
+                [],
+                [],
+                [],
+                []]
             }
         },
         "movies":{

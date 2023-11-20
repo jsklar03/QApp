@@ -1,4 +1,6 @@
 
+
+
 function retrieveFromLocalStorage() {
     // gets users answers
     let saved_answers = localStorage.getItem('storedAnswers');
@@ -24,6 +26,7 @@ function checkAnswers(answer_array,real_answers){
         }
     wrong_counter = total_counter - right_counter;
     console.log(total_counter, right_counter, wrong_counter)
+    console.log(typeof(total_counter))
 }
 
 function updateResults(answer_array,real_ansers){
@@ -33,3 +36,5 @@ function updateResults(answer_array,real_ansers){
 function updateChart(){
     
 }
+
+console.log(scores)
