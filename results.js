@@ -1,6 +1,3 @@
-
-
-
 function retrieveFromLocalStorage() {
     // gets users answers
     let saved_answers = localStorage.getItem('storedAnswers');
@@ -25,8 +22,9 @@ function checkAnswers(answer_array,real_answers){
             else{}
         }
     wrong_counter = total_counter - right_counter;
-    console.log(total_counter, right_counter, wrong_counter)
-    console.log(typeof(total_counter))
+    console.log(total_counter, right_counter, wrong_counter);
+    console.log(typeof(total_counter));
+    percentage = (right_counter/total_counter);
 }
 
 function updateResults(answer_array,real_ansers){
@@ -38,3 +36,13 @@ function updateChart(){
 }
 
 console.log(scores)
+
+function saveToLocalStorage(){
+    let stored_answers = new QuizSet(total_counter,right_counter,wrong_counter,percentage);
+    stored_answers.user_answers = user_answers;
+    stored_answers.real_answers = real_answers;
+    stored_answers.questions = questions;
+    stored_answers.category = topic;
+    stored_answers.quiz_level = level;
+    localStorage.setItem('storedQuizzes', user_answers);
+  }

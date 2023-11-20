@@ -1,4 +1,5 @@
 let storedAnswers = [];
+let storedQuizzes = [];
 
 
 let right_counter = 0;
