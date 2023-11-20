@@ -617,5 +617,7 @@ class QuizSet {
         this.right_score = right_counter;
         this.wrong_score = wrong_counter;
         this.percentage = (right_counter/total_counter);
+        this.category = topic;
+        this.quiz_level = level;
     }
 }
