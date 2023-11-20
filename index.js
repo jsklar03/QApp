@@ -9,9 +9,7 @@ function retrieveFromLocalStorage() {
     let answer_array = saved_answers.split(',');
     console.log(saved_answers);
     console.log(answer_array);
-    console.log(real_answers);
-
-    checkAnswers(answer_array, real_answers);
+    updateScoreboard()
 }
 
 function updateScoreboard(total_counter,right_counter){
@@ -19,7 +17,6 @@ function updateScoreboard(total_counter,right_counter){
     let t_score = total_counter;
     let r_score = right_counter;
     console.log(w_score,t_score,r_score)
-    // document.querySelector()
 
 }
 
