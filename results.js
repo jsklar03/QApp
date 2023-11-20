@@ -5,28 +5,23 @@ function retrieveFromLocalStorage() {
     let answer_array = saved_answers.split(',');
     console.log(saved_answers);
     console.log(answer_array);
+    console.log(real_answers);
 
-    checkAnswers(answer_array);
+    checkAnswers(answer_array, real_answers);
 }
 
 function checkAnswers(answer_array,real_answers){
-    for(i of answer_array){
-        total_counter+=1;
-        let user_answer = i;
-        console.log(total_counter)
-        console.log(user_answer)
-        for(k of real_answers){
-            let real_answer = k;
-            console.log(real_answer);
-            if (i==k){
+    total_counter+=real_answers.length;
+    for(let i = 0, k=0; i<=answer_array.length,k<real_answers.length;i++,k++){
+        let user_answer = answer_array[i];
+        let real_answer = real_answers[k];
+        console.log(real_answer + " vs " + user_answer);
+        if (user_answer == real_answer){
                 right_counter+=1
-                console.log(right_counter)
+                console.log(total_counter, right_counter, wrong_counter)
             }
-            else{
-                wrong_counter+=1
-                console.log(wrong_counter)
-            }
+            else{}
         }
-    }
+    wrong_counter = total_counter - right_counter;
     console.log(total_counter, right_counter, wrong_counter)
 }

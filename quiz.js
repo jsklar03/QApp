@@ -20,8 +20,6 @@ let quiz_level = quiz_bank["topic"][topic]["levels"][level];
 let quiz_mc = quiz_bank["topic"][topic]["levels"][level + "_mc"];
 let quiz_answers = quiz_bank["topic"][topic]["levels"][level + "_a"];
 
-// console.log(localStorage.getItem('storedItem'))
-
 let answer_a = document.querySelector('#a').innerHTML;
 let answer_b = document.querySelector('#b').innerHTML;
 let answer_c = document.querySelector('#c').innerHTML;
