@@ -42,8 +42,10 @@ const quiz_bank = {
                     "What is the capitol of Texas?",
                     "What is the capitol of Arizona?"
                     ],
+                    
                     "easy_a":
                     ["Albany","Oklahoma City","Boston","Austin","Pheonix"],
+                    
                     "easy_mc":[
                         ["Albany","New York City","Buffalo","Syracuse"],
                         ["Tulsa","Oklahoma City","Norman","Denton"],
@@ -60,19 +62,23 @@ const quiz_bank = {
                 ],
 
                     "medium_a":["Lansing","Springfield","Madison","Sacramento","Tallahassee"],
+                    
                     "medium_mc":[
                         ["Detroit","Flint","Lansing","Ann Arbor"],
                         ["Chicago","Springfield","Lake Zurich","Urbana"],
                         ["Madison","Green Bay","Milwaukee","La Pierre"],
                         ["Los Angeles","San Francisco","Sacramento", "San Diego"],
                         ["Miami","Coral Gables","Orlando","Tallahassee"]],
+                    
                     "hard":
                         ["What is the capitol of Idaho?",
                         "What is the capitol of North Dakota?",
                         "What is the capitol of South Dakota?",
                         "What is the capitol of Wyoming?",
                         "What is the capitol of New Mexico?"],
+                    
                     "hard_a":["Boise","Bismarck","Pierre","Cheyenne","Santa Fe"],
+                    
                     "hard_mc":[
                         ["Boise","Idaho Falls","Moscow","Twin Falls"],
                         ["Fargo","Bismarck","Minot","Grand Forks"],
@@ -346,6 +352,7 @@ const quiz_bank = {
                 "What are the two major political parties in the UK?"
             ],
                 "hard_a":["Apartheid","UN Resolution 292","General Secretary","Antonio Guteres","Labour and Conservative"],
+                
                 "hard_mc":[["Apartheid","Communism","Fascism","Jingoism"],
                 ["Arab-Israeli Treaty","British Mandata 791","Independence Declaration","UN Resolution 292"],
                 ["Admiral","Chancellor","General Secretary","President"],
@@ -420,19 +427,27 @@ const quiz_bank = {
                 "Is a warrant an Equity or Fixed Income instrument?",
                 "What is the term for bonds issued by local governments?"],
                 
-                "medium_a":["Duration","Price and Outstanding Shares","Equity","Equity","Munis"],
+                "medium_a":["Duration","Price and Outstanding Shares","Equity","Equity","Municipal Bond"],
                 
-                "medium_mc":[[],[],[],[],[]],
+                "medium_mc":[["Duration","OAS","Spread","Z-Score"],
+                ["Price and EPS","Earnings Per Share","Price and Outstanding Shares","EBITDA"],
+                ["Derivatives","Equity","Fixed Income","Alternatives"],
+                ["Equity","Fixed Income","Both","Neither"],
+                ["T-bills","Treasuries","Municipal Bond","Muncies"]],
                 
                 "hard":["Which of the following is not a security identifier?",
-                "Would you 'Call' ot 'Put' a stock that you believe will go down?",
+                "Would you 'Call' ot 'Put' a stock option that you believe will go down?",
                 "Would you go 'Long' or 'Short' a stock that you think will go up?",
-                "What happens when an investor is forced to buy shares at a high price to pay back their short?",
+                "What happens when an investor is forced to buy shares at a higher price to pay back their short?",
                 "Which of the following is not a US-based Stock Market?"],
                 
-                "hard_a":["Security Name","Put","Long","Short Squeeze","TOPIX"],
+                "hard_a":["TOPIX","Put","Long","Short Squeeze","TOPIX"],
                 
-                "hard_mc":[[],[],[],[],[]]
+                "hard_mc":[["CUSIP","ISIN","SEDOL","TOPIX"],
+                ["Call","Put","Both","Neither"],
+                ["Long","Short","Both","Neither"],
+                ["Long Lump","Long Squeeze","Short ","Short Squeeze"],
+                ["NASDAQ","DJIA","S&P500","TOPIX"]]
             }
         },
         "philosopghy":{
@@ -465,15 +480,19 @@ const quiz_bank = {
                 ["Capitalism and Socialism","Capitalism and Communism", "Communism and Fascism","Anarchism and Fascism"],
                 ["Macchiavelli","John Locke","Michel Foucault","Emile Durkheim"]],
 
-                "hard":["What relationship does the social contract seek to explain?",
+                "hard":["Which Philosopher has an english word named after him?",
                 "Which philosopher published on 'Collective Effervescence'?",
                 "What philosopher explored the relationship between workers and capital?",
                 "Which economic philosopher inspired Charles Darwin's theory of Natural Selection?",
                 "Which Holocaust surviver, author and philosopher focuses on genocide?"],
 
-                "hard_a":["John Locke","Emile Durkheim","Karl Marx","Thomas Malthus","Ellie Weisel"],
+                "hard_a":["Macchiavelli","Emile Durkheim","Karl Marx","Thomas Malthus","Elie Weisel"],
 
-                "hard_mc":[[],[],[],[],[]]
+                "hard_mc":[["Da Vinci","Durkheim","Machiavelli","Tycho"],
+                ["Emile Durkheim","Isaac Newton","Karl Marx","Thomas Malthus"],
+                ["Emile Durkheim","Isaac Newton","Karl Marx","Thomas Malthus"],
+                ["Emile Durkheim","Isaac Newton","Karl Marx","Thomas Malthus"],
+                ["Anne Frank","Elie Weisel","Fanny Aizenberg","Samuel Bak"]]
             }
         },
         "sports":{
@@ -512,13 +531,13 @@ const quiz_bank = {
                 "What is Fenway Park famous for?",
                 "What position is typically shorter and handles the ball the most in basketball?"],
 
-                "hard_a":["Lombardi Trophy","Hockey","Field Goal","Green Monster","Point Guard"],
+                "hard_a":["Lombardi Trophy","Hockey","Field Goal","The Green Monster","Point Guard"],
 
                 "hard_mc":[["Lamar Hunt Trophy","Stanley Cup","Lombardi Trophy","A.C. Hall Trophy"],
-                [],
-                [],
-                [],
-                []]
+                ["Baseball","Basketball","Football","Hockey"],
+                ["Field Goal","Free Throw","Jump Shot","Shot Goal"],
+                ["Ivy Outfield","The Green Monster","New York","Yankees"],
+                ["Center","Point Guard","Power Forward","Shooting Guard"]]
             }
         },
         "movies":{
@@ -528,23 +547,43 @@ const quiz_bank = {
                 "What movie series is based on a boy wizard in Britain?",
                 "What move is 'Here's Johnny' from?",
                 "What children's movie features a green animated ogre?"],
+
                 "easy_a":["Toy Story","Madagascar","Harry Potter","The Shining","Shrek"],
-                "easy_mc":[[],[],[],[],[]],
+
+                "easy_mc":[["Finding Nemo","Harry Potter","Shrek","Toy Story"],
+                ["Finding Nemo","Madagascar","Shrek","Toy Story"],
+                ["Finding Nemo","Harry Potter","Percy Jackson","Toy Story"],
+                ["Full Metal Jacket","Goodwill Hunting","Pulp Fiction","The Shining"],
+                ["Finding Nemo","Madagascar","Shrek","Toy Story"]],
+
                 "medium":["What WWII movie was Tom Hanks a main character in?",
                 "What 'Coming of Age' movie features a character named Benny 'The Jet' Rodriguez?",
                 "What 80's movie features a group of different teens bonding in detention?",
                 "What Leonardo Dicapprio movie features a young Margot Robie?",
                 "What fictional character did Gal Gadot play?"
                 ],
-                "medium_a":["Saving Private Ryan","Sandlot","Breakfast Club","Wolf of Wall Street","Wonder Woman"],
-                "medium_mc":[[],[],[],[],[]],
+
+                "medium_a":["Saving Private Ryan","Sandlot","Breakfast Club","Wolf of Wall St","Wonder Woman"],
+                
+                "medium_mc":[["Band of Brothers","Patton","Platoon","Saving Private Ryan"],
+                ["Backstreet Boys","Bad News Boys","Sandlot","Yardball"],
+                ["16 Candles","Breakfast Club","Dirty Dancing","The Outsiders"],
+                ["Blood Diamond","Django","Titanic","Wolf of Wall St"],
+                ["Cat Woman","Princess Peach","Super Woman","Wonder Woman"]],
+                
                 "hard":["What movie is based on Harper Lee's book?",
                 "What movie features a group of four young friends who die in WWI serving the Keiser?",
                 "What Vietnam movie features Charlie Sheen?",
                 "What 2000's movie focuses on the dystopian impacts of Climate Change?",
                 "Which Boston based movie features Matt Damon as a corrupt police officer?"],
+                
                 "hard_a":["To Kill a Mockingbird","All Quiet on the Western Front","Platoon","The Day After Tomorrow","The Departed"],
-                "hard_mc":[[],[],[],[],[]]
+                
+                "hard_mc":[["Amber Sun","Catcher in the Rye","The Red Pony","To Kill a Mockingbird"],
+                ["1917","All Quiet on the Western Front","The Trenches","War Horse"],
+                ["Apocalypse Now","Full Metal Jacket","Platoon","We Were Soldiers"],
+                ["Apocalypse Now","Arctic Melt","Greenhouse Gassed","The Day After Tomorrow"],
+                ["Beantown","Good Will Hunting","The Departed","The Town"]]
             }
         }
 }
@@ -570,4 +609,13 @@ class AnswerSet {
         this.element = null;
     }
 
+}
+
+class QuizSet {
+    constructor (total_counter,right_counter,wrong_counter,percentage){
+        this.total_score = total_counter;
+        this.right_score = right_counter;
+        this.wrong_score = wrong_counter;
+        this.percentage = (right_counter/total_counter);
+    }
 }
