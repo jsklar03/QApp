@@ -25,3 +25,11 @@ function checkAnswers(answer_array,real_answers){
     wrong_counter = total_counter - right_counter;
     console.log(total_counter, right_counter, wrong_counter)
 }
+
+function updateResults(answer_array,real_ansers){
+
+}
+
+function updateChart(){
+    
+}
