@@ -94,7 +94,7 @@
     font: 700 50px Helvetica, sans-serif;
   }
 
-.submit_button {
+#submit_button {
     border: 1px solid black;
     border-radius: 40px;
     background-color: #00a3ff;

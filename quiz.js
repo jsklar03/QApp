@@ -1,15 +1,5 @@
-//Constants added for add to cart btn
-// const queryString = window.location.search;
-//console.log(queryString);
-
-// Then, we use the query string to create a URLSearchParams object:
-// const params = new URLSearchParams(queryString);
-//console.log(params);
-
-// const topic = params.get('topic');
-// // console.log(topic);
-// const level = params.get('level');
-// // console.log(level);
+document.getElementById("submit_btn").setAttribute("href", "../results.html?topic="+ topic + "&level="+level);
+console.log(document.getElementById("submit_btn").children[0])
 
 document.querySelector('.quiz_title').innerHTML = topic +" - "+ level;
 
@@ -108,8 +98,6 @@ function recordAnswers(e){
     console.log(user_answers);
     saveToLocalStorage(user_answers)
 }
-
-document.getElementById("submit_btn").children[0].setAttribute("href", "../quiz.html?topic="+ topic + "&level="+level);
 
 function saveToLocalStorage(user_answers){
     let stored_answers = new AnswerSet(user_answers,real_answers,questions,category,quiz_level);
