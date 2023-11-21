@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="results.css">
     <script src="quizbank.js"></script>
     <script defer src="results.js" onload="retrieveFromLocalStorage()"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body class="body">
     <header>
@@ -42,6 +43,8 @@
         <!-- end of results dash -->
       </div>
       <!-- beginning of the button flex box -->
+      <div id="piechart"></div>
+      <div id="barchart"></div>
 
       <div class="buttons_flex">
         <div class="retake_button">

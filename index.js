@@ -5,10 +5,8 @@ let percentage = document.querySelector('#percent_score');
 
 function retrieveFromLocalStorage() {
     // gets users answers
-    let saved_answers = localStorage.getItem('storedAnswers');
-    let answer_array = saved_answers.split(',');
+    let saved_answers = localStorage.getItem('storedQuizzes');
     console.log(saved_answers);
-    console.log(answer_array);
     updateScoreboard()
 }
 

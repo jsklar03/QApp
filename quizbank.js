@@ -1,5 +1,5 @@
 let storedAnswers = [];
-let storedQuizzes = [];
+let storedQuizzes = ['','','','',''];
 
 
 let right_counter = 0;
@@ -590,6 +590,7 @@ const quiz_bank = {
 }
 }
 
+
 let user_answers = ['','','','',''];
 console.log(topic)
 console.log(level)
@@ -612,7 +613,7 @@ class AnswerSet {
 
 }
 
-class QuizSet {
+class ResultSet {
     constructor (total_counter,right_counter,wrong_counter,percentage){
         this.total_score = total_counter;
         this.right_score = right_counter;
