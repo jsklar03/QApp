@@ -9,72 +9,42 @@ function retrieveFromLocalStorage() {
     checkAnswers(answer_array, real_answers);
 }
 
+let color_array = ['','','','','']
+
 function checkAnswers(answer_array,real_answers){
     total_counter+=real_answers.length;
     for(let i = 0, k=0; i<=answer_array.length,k<real_answers.length;i++,k++){
         let user_answer = answer_array[i];
         let real_answer = real_answers[k];
-        // console.log(real_answer + " vs " + user_answer);
-        if (user_answer == real_answer){
-                right_counter+=1
-                // console.log(total_counter, right_counter, wrong_counter)
-            }
-            else{}
-        }
-    wrong_counter = total_counter - right_counter;
-    console.log(total_counter, right_counter, wrong_counter);
-    // console.log(typeof(total_counter));
-    percentage = (right_counter/total_counter);
-    // console.log('done');
-    saveToLocalStorage(total_counter, right_counter, wrong_counter, percentage);
-    updateResults(answer_array,real_answers)
-}
-
-function updateResults(answer_array,real_answers){
-    console.log('updateResults')
-    for(let i=0, k=0; i<=answer_array.length, k<real_answers.length;i++,k++){
-        let user_answer = answer_array[i];
-        let real_answer = real_answers[k];
         console.log(real_answer + " vs " + user_answer);
         if (user_answer == real_answer){
-            console.log(i);
-            if (i=0)
-                document.getElementById('r1').setAttribute('class','q_div_right')
+                right_counter+=1;
+                color_array[i]='green'
+                // console.log(total_counter, right_counter, wrong_counter)
             }
-            else if(i=1){
-                document.getElementById('r2').setAttribute('class','q_div_right')
-            }
-            else if(i=2){
-                document.getElementById('r3').setAttribute('class','q_div_right')
-            }
-            else if(i=3){
-                document.getElementById('r4').setAttribute('class','q_div_right')
-            }
-            else if(i=4){
-                document.getElementById('r5').setAttribute('class','q_div_right')
-            }
-
-        else if(user_answer!=real_answer){
-            console.log(i);
-            if(i=0){
-                document.getElementById('r1').setAttribute('class','q_div_wrong')
-            }
-            else if(i=1){
-                document.getElementById('r2').setAttribute('class','q_div_wrong')
-            }
-            else if(i=2){
-                document.getElementById('r3').setAttribute('class','q_div_wrong')
-            }
-            else if(i=3){
-                document.getElementById('r4').setAttribute('class','q_div_wrong')
-            }
-            else if(i=4){
-                document.getElementById('r5').setAttribute('class','q_div_wrong')
+            else{
+                color_array[i]='red'
             }
         }
-        }
-        
+    console.log(color_array)
+    wrong_counter = total_counter - right_counter;
+    console.log(total_counter, right_counter, wrong_counter);
+    percentage = ((right_counter/total_counter)*100);
+    saveToLocalStorage(total_counter, right_counter, wrong_counter, percentage);
+    changeColor(color_array);
+}
 
+let id_array = ['r1','r2','r3','r4','r5']
+
+function changeColor(color_array){
+    for (let x=0,y=0;x<color_array.length,y<id_array.length;x++,y++){
+        if (color_array[x]=='green'){
+            document.getElementById(id_array[y]).setAttribute('class','q_div_right')
+        }
+        else{
+            document.getElementById(id_array[y]).setAttribute('class','q_div_wrong')
+        }
+    }
 }
 
 console.log(scores)

@@ -90,7 +90,7 @@ const quiz_bank = {
                 "What country is NOT in North America?",
                 "What is the capitol of Mexico?"],
 
-                "easy_a":["Madrid","Russia","India","Belize","Mexico City"],
+                "easy_a":["Madrid","Russia","India","Ecuador","Mexico City"],
 
                 "easy_mc":[["Barcelona","Madrid","Valencia","Grenada"],
                 ["Russia","USA","China","India"],

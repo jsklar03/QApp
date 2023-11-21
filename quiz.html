@@ -18,7 +18,7 @@
     </div>
 </header>
 
-      <div class="quiz_title">Geography - State Capitols</div>
+    <div class="quiz_title">Geography - State Capitols</div>
       <div class="card_placeholder" onload="updateMultipleChoice()">
         <div class="question_number">1</div>
         <div class="question">What is the capital of Michigan?</div>
@@ -42,12 +42,14 @@
             <div class="forward" onclick="updateQuizCard()">></div>
           </div>
         </div>
-        <a class="link" id="submit_btn" onclick="saveToLocalStorage(user_answers)" href="../results.html?topic=geography&level=easy">
-          <div id="submit_button">
-              <div class="submit_quiz">Submit Quiz</div>
-          </div>
-        </a>
+        <div id="spacer"></div>
       </div>
     </div>
+    <a class="link" id="submit_btn" onclick="saveToLocalStorage(user_answers)" href="../results.html?topic=geography&level=easy">
+      <div id="submit_button">
+          <div class="submit_quiz">Submit Quiz</div>
+      </div>
+    </a>
   </div>
+  
 </body>

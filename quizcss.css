@@ -70,12 +70,30 @@
     margin-top: 20px;
   }
 
+.answer:hover {
+  align-items: flex-start;
+  align-self: stretch;    
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-style: bold;
+}
+
 .answer_name {
     color: white;
     align-self: stretch;
     flex-basis: auto;
-    font: italic 700 30px Helvetica, sans-serif;
+    font: 700 30px Helvetica, sans-serif;
   }
+
+.answer_name:hover {
+    color: white;
+    align-self: stretch;
+    flex-basis: auto;
+    font: italic 700 30px Helvetica, sans-serif;
+    font-style: bold;
+    font-size: 35;
+}
 
 #forward_back_box {
     /* position: relative; */
@@ -94,6 +112,13 @@
     font: 700 50px Helvetica, sans-serif;
   }
 
+.back:hover, .forward:hover {
+  color: white;
+  font-style: bold;
+  align-self: stretch;
+  font: 700 55px Helvetica, sans-serif;
+}
+
 #submit_button {
     border: 1px solid black;
     border-radius: 40px;
@@ -106,6 +131,7 @@
     padding: 25px 80px;
     margin:0 auto;
     margin-top: 200px;
+    margin-bottom: 100px;
   }
 
 .submit_quiz {
@@ -115,3 +141,7 @@
     align-self: center;
     font: italic 700 36px Helvetica, sans-serif;
   }
+
+#spacer{
+  height: 200px;
+}
