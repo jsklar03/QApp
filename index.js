@@ -5,8 +5,9 @@ let percentage = document.querySelector('#percent_score');
 
 function retrieveFromLocalStorage() {
     // gets users answers
-    let saved_answers = localStorage.getItem('storedQuizzes');
-    console.log(saved_answers);
+    console.log(localStorage)
+    let saved_scores = localStorage.getItem('storedQuizzes');
+    console.log(saved_scores);
     updateScoreboard()
 }
 
@@ -18,6 +19,4 @@ function updateScoreboard(total_counter,right_counter){
 
 }
 
-function updateChart(){
-
-}
+//also need to update the pie chart

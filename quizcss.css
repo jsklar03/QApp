@@ -1,3 +1,8 @@
+a{
+  text-decoration: none;
+  color: royalblue;
+}
+
 .header_box {
     background-color: white;
     display: flex;
@@ -93,6 +98,15 @@
     font: italic 700 30px Helvetica, sans-serif;
     font-style: bold;
     font-size: 35;
+}
+
+.answer_name::selection {
+  color: greenyellow;
+  align-self: stretch;
+  flex-basis: auto;
+  font: italic 700 30px Helvetica, sans-serif;
+  font-style: bold;
+  font-size: 35;
 }
 
 #forward_back_box {

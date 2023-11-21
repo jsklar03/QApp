@@ -1,5 +1,5 @@
 let storedAnswers = [];
-let storedQuizzes = ['','','','',''];
+let stored_quizzes = ['','','','',''];
 
 
 let right_counter = 0;
@@ -607,11 +607,11 @@ class AnswerSet {
 }
 
 class ResultSet {
-    constructor (total_counter,right_counter,wrong_counter,percentage){
+    constructor (total_counter,right_counter,wrong_counter){
         this.total_score = total_counter;
         this.right_score = right_counter;
         this.wrong_score = wrong_counter;
-        this.percentage = (right_counter/total_counter);
+        this.percentage = ((right_counter/total_counter)*100);
         this.category = topic;
         this.quiz_level = level;
     }
