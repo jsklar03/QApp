@@ -41,7 +41,6 @@ function changeColor(color_array){
         }
     }
 }
-
 console.log(scores)
 
 function saveToLocalStorage(total_counter, right_counter, wrong_counter){
@@ -59,9 +58,6 @@ function saveToLocalStorage(total_counter, right_counter, wrong_counter){
     localStorage.setItem('stored_quizzes', stored_quizzes);
     executeD3(right_counter,wrong_counter);
   }
-
-
-
   
 // Pie chart
 function executeD3 (right_counter,wrong_counter){
