@@ -25,13 +25,6 @@ console.log(topic);
 const level = params.get('level');
 console.log(level);
 
-// let user_answers = ['','','','',''];
-// console.log(quiz_bank["topic"][topic])
-// let real_answers = quiz_bank["topic"][topic]["levels"][level + "_a"];
-// console.log(real_answers)
-// let questions = quiz_bank["topic"][topic]["levels"][level];
-// let category = topic;
-
 const quiz_bank = {
     "topic":{
         "geography":{

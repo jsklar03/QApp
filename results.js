@@ -2,9 +2,9 @@ function retrieveFromLocalStorage() {
     // gets users answers
     let saved_answers = localStorage.getItem('storedAnswers');
     let answer_array = saved_answers.split(',');
-    console.log(saved_answers);
-    console.log(answer_array);
-    console.log(real_answers);
+    // console.log(saved_answers);
+    // console.log(answer_array);
+    // console.log(real_answers);
 
     checkAnswers(answer_array, real_answers);
 }
@@ -14,27 +14,67 @@ function checkAnswers(answer_array,real_answers){
     for(let i = 0, k=0; i<=answer_array.length,k<real_answers.length;i++,k++){
         let user_answer = answer_array[i];
         let real_answer = real_answers[k];
-        console.log(real_answer + " vs " + user_answer);
+        // console.log(real_answer + " vs " + user_answer);
         if (user_answer == real_answer){
                 right_counter+=1
-                console.log(total_counter, right_counter, wrong_counter)
+                // console.log(total_counter, right_counter, wrong_counter)
             }
             else{}
         }
     wrong_counter = total_counter - right_counter;
     console.log(total_counter, right_counter, wrong_counter);
-    console.log(typeof(total_counter));
+    // console.log(typeof(total_counter));
     percentage = (right_counter/total_counter);
-    console.log('done');
+    // console.log('done');
     saveToLocalStorage(total_counter, right_counter, wrong_counter, percentage);
+    updateResults(answer_array,real_answers)
 }
 
-function updateResults(answer_array,real_ansers){
+function updateResults(answer_array,real_answers){
+    console.log('updateResults')
+    for(let i=0, k=0; i<=answer_array.length, k<real_answers.length;i++,k++){
+        let user_answer = answer_array[i];
+        let real_answer = real_answers[k];
+        console.log(real_answer + " vs " + user_answer);
+        if (user_answer == real_answer){
+            console.log(i);
+            if (i=0)
+                document.getElementById('r1').setAttribute('class','q_div_right')
+            }
+            else if(i=1){
+                document.getElementById('r2').setAttribute('class','q_div_right')
+            }
+            else if(i=2){
+                document.getElementById('r3').setAttribute('class','q_div_right')
+            }
+            else if(i=3){
+                document.getElementById('r4').setAttribute('class','q_div_right')
+            }
+            else if(i=4){
+                document.getElementById('r5').setAttribute('class','q_div_right')
+            }
 
-}
+        else if(user_answer!=real_answer){
+            console.log(i);
+            if(i=0){
+                document.getElementById('r1').setAttribute('class','q_div_wrong')
+            }
+            else if(i=1){
+                document.getElementById('r2').setAttribute('class','q_div_wrong')
+            }
+            else if(i=2){
+                document.getElementById('r3').setAttribute('class','q_div_wrong')
+            }
+            else if(i=3){
+                document.getElementById('r4').setAttribute('class','q_div_wrong')
+            }
+            else if(i=4){
+                document.getElementById('r5').setAttribute('class','q_div_wrong')
+            }
+        }
+        }
+        
 
-function updateChart(){
-    
 }
 
 console.log(scores)
