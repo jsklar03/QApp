@@ -66,10 +66,11 @@
 
 .performance_column {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     line-height: normal;
     width: 70%;
     margin-left: 20px;
+    justify-content: space-around;
 }
 
 .img {
@@ -85,7 +86,7 @@
     display: flex;
     margin-top: 96px;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 20px;
 }
 

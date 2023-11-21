@@ -52,7 +52,7 @@ function saveToLocalStorage(total_counter, right_counter, wrong_counter, percent
     stored_quizzes.category = topic;
     stored_quizzes.quiz_level = level;
     localStorage.setItem('storedQuizzes', stored_quizzes);
-    executeD3(total_counter,right_counter,wrong_counter,percentage);
+    executeD3(right_counter,wrong_counter);
   }
 
 
@@ -64,10 +64,11 @@ let pieData = [
       { label: 'Right', value: right_counter },
       { label: 'Wrong', value: wrong_counter }
   ];
-  
-let pieWidth = 200;
-let pieHeight = 200;
-  
+//sets dimensions of the visualization for the pie chart
+let pieWidth = 300;
+let pieHeight = 300;
+
+//impacts sizing of the graph
 let pieRadius = Math.min(pieWidth, pieHeight) / 2;
   
 let pieSvg = d3.select("#pieChart")
@@ -79,7 +80,7 @@ let pieSvg = d3.select("#pieChart")
   
 let pieColor = d3.scaleOrdinal()
       .domain(pieData.map(d => d.label))
-      .range(["#4CAF50", "#FF5722"]);
+      .range(["#2196F3", "#FF5722"]);
   
 let pie = d3.pie()
       .value(d => d.value);
@@ -100,10 +101,13 @@ let barData = [
       { label: 'Right', value: right_counter },
       { label: 'Wrong', value: wrong_counter }
   ];
-  
+  console.log(right_counter,wrong_counter)
+
+//sets the width/height of the bar chart
 let barWidth = 300;
-let barHeight = 200;
-  
+let barHeight = 300;
+
+//uses stuff from D3.js to set the bars
 let barSvg = d3.select("#barChart")
       .append("svg")
       .attr("width", barWidth)
@@ -119,7 +123,7 @@ let barY = d3.scaleLinear()
       .range([barHeight, 0]);
   
 barSvg.selectAll("rect")
-      .data(barData)
+      .data(barData)//data dictionary for the columns
       .enter()
       .append("rect")
       .attr("x", d => barX(d.label))

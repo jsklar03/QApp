@@ -115,3 +115,8 @@
     align-self: center;
     font: italic 700 36px Helvetica, sans-serif;
   }
+
+  .performance_column {
+    display: flex;
+    flex-direction: row;
+  }
