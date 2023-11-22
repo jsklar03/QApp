@@ -56,7 +56,7 @@ function saveToLocalStorage(total_counter, right_counter, wrong_counter){
     console.log(right_counter,wrong_counter,percentage);
     stored_quizzes.category = topic;
     stored_quizzes.quiz_level = level;
-    localStorage.setItem('stored_quizzes', total_counter);
+    localStorage.setItem('total_num', total_counter);
     localStorage.setItem('right_num', right_counter)
     localStorage.setItem('wrong_num',wrong_counter)
     console.log(localStorage)

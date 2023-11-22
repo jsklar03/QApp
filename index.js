@@ -3,6 +3,12 @@ let right_score = document.querySelector('#correct_score');
 let wrong_score = document.querySelector('#wrong_score');
 let percentage = document.querySelector('#percent_score');
 
+let update_right = localStorage.getItem('right_num') 
+let update_wrong = localStorage.getItem('wrong_num')
+let update_total = localStorage.getItem('stored_quizzes')
+console.log(update_right,update_wrong,update_total)
+console.log(typeof(update_right))
+
 function retrieveFromLocalStorage() {
     // gets users answers
     console.log(localStorage)

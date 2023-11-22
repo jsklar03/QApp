@@ -1,5 +1,7 @@
 let storedAnswers = [];
-let stored_quizzes = [];
+let total_num = [];
+let right_num = [];
+let wrong_num = [];
 
 
 let right_counter = 0;
@@ -394,7 +396,7 @@ const quiz_bank = {
                 
                 "hard_mc":[["Democrats","Libertarians","Green Party","Republicans"],
                 ["Deadweight Loss","Fees","Price Equilibrium","Subsidy"],
-                ["Domestic Currency Weakens","Domesitc Currency Strengthens","Foreign Currency Strengthens","No Impact"],
+                ["Domestic Currency Weakens","Domestic Currency Strengthens","Foreign Currency Strengthens","No Impact"],
                 ["Deprecates","Falls","Increases","No Impact"],
                 ["Prices Go Down","Prices Go Up","Interest Rates Go Up","No Impact"]]
             }
@@ -585,10 +587,10 @@ const quiz_bank = {
 
 
 let user_answers = ['','','','',''];
-console.log(topic)
-console.log(level)
-console.log(quiz_bank["topic"])
-console.log(quiz_bank["topic"][topic])
+// console.log(topic)
+// console.log(level)
+// console.log(quiz_bank["topic"])
+// console.log(quiz_bank["topic"][topic])
 let real_answers = quiz_bank["topic"][topic]["levels"][level + "_a"];
 console.log(real_answers)
 let questions = quiz_bank["topic"][topic]["levels"][level];
