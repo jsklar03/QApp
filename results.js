@@ -47,15 +47,19 @@ function saveToLocalStorage(total_counter, right_counter, wrong_counter){
     console.log("Save Function")
     let stored_quizzes = new ResultSet(total_counter,right_counter,wrong_counter);
     stored_quizzes.total_counter = total_counter;
-    console.log(total_counter)
-    console.log(stored_quizzes.total_counter)
+    console.log(stored_quizzes.total_counter);
+
     stored_quizzes.right_counter = right_counter;
     stored_quizzes.wrong_counter = wrong_counter;
     stored_quizzes.percentage = percentage;
-    console.log(right_counter,wrong_counter,percentage)
+
+    console.log(right_counter,wrong_counter,percentage);
     stored_quizzes.category = topic;
     stored_quizzes.quiz_level = level;
-    localStorage.setItem('stored_quizzes', stored_quizzes);
+    localStorage.setItem('stored_quizzes', total_counter);
+    localStorage.setItem('right_num', right_counter)
+    localStorage.setItem('wrong_num',wrong_counter)
+    console.log(localStorage)
     executeD3(right_counter,wrong_counter);
   }
   
