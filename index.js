@@ -18,12 +18,80 @@ let total_int = parseInt(update_total);
 total_score.innerHTML=total_int;
 right_score.innerHTML=right_int;
 wrong_score.innerHTML=wrong_int;
-console.log(typeof(total_int));
 
+function executeD3 (right_int,wrong_int){
+    let pieData = [
+      { label: 'Right', value: right_int },
+      { label: 'Wrong', value: wrong_int }
+  ];
+//sets dimensions of the visualization for the pie chart
+    let pieWidth = 300;
+    let pieHeight = 300;
 
-console.log(typeof(right_int,wrong_int,total_int))
-console.log(right_int,wrong_int,total_int)
+//impacts sizing of the graph
+    let pieRadius = Math.min(pieWidth, pieHeight) / 2;
+  
+    let pieSvg = d3.select("#piechart")
+      .append("svg")
+      .attr("width", pieWidth)
+      .attr("height", pieHeight)
+      .append("g")
+      .attr("transform", "translate(" + pieWidth / 2 + "," + pieHeight / 2 + ")");
+  
+    let pieColor = d3.scaleOrdinal()
+      .domain(pieData.map(d => d.label))
+      .range(["#2196F3", "#FF5722"]);
+  
+    let pie = d3.pie()
+      .value(d => d.value);
+  
+    let arc = d3.arc()
+      .innerRadius(0)
+      .outerRadius(pieRadius);
+  
+    pieSvg.selectAll("path")
+      .data(pie(pieData))
+      .enter()
+      .append("path")
+      .attr("d", arc)
+      .attr("fill", d => pieColor(d.data.label));
+  
+  // Bar chart
+    let barData = [
+      { label: 'Right', value: right_int },
+      { label: 'Wrong', value: wrong_int }
+  ];
+    console.log(right_int,wrong_int)
 
+//sets the width/height of the bar chart
+    let barWidth = 300;
+    let barHeight = 300;
+
+//uses stuff from D3.js to set the bars
+    let barSvg = d3.select("#barchart")
+      .append("svg")
+      .attr("width", barWidth)
+      .attr("height", barHeight);
+  
+    let barX = d3.scaleBand()
+      .domain(barData.map(d => d.label))
+      .range([0, barWidth])
+      .padding(0.1);
+  
+    let barY = d3.scaleLinear()
+      .domain([0, d3.max(barData, d => d.value)])
+      .range([barHeight, 0]);
+  
+    barSvg.selectAll("rect")
+      .data(barData)//data dictionary for the columns
+      .enter()
+      .append("rect")
+      .attr("x", d => barX(d.label))
+      .attr("y", d => barY(d.value))
+      .attr("width", barX.bandwidth())
+      .attr("height", d => barHeight - barY(d.value))
+      .attr("fill", d => (d.label === 'Right' ? '#2196F3' : (d.label === 'Wrong' ? '#FF0000' : '#CCCCCC')));
+}
 
 
 //also need to update the pie chart

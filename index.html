@@ -7,13 +7,14 @@
     </title>
     <link rel="stylesheet" href="style.css">
     <script defer src="../index.js"></script>
+    <script defer src="https://d3js.org/d3.v5.min.js" onload="executeD3(right_int,wrong_int)"></script>
 </head>
 
 <body>
     <header class="header">
       <section class="logo">
         <a class="link" href="../index.html">
-          <h1>QuizApp</h1>
+          <h1><span id="q">Q</span>uizApp</h1>
         </a>
       </section>
     </header>
@@ -22,57 +23,51 @@
       <div class="hero_flex">
         <div class="chart_box">
           <div class="chart">
-            <img
-              loading="lazy"
-              srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/90504c89-e645-45bf-82ad-c4f7929deab2?apiKey=8ff65df25de9477fa923cc5a03d9a493&"
-              class="img"
-            />
+            <div id="barchart"></div>
+            <div id="piechart"></div>
+          </div>
           </div>
         </div>
         <div class="instruction_box">
           <div class="instruction">
-            <div class="instruction_title">QuizApp:</div>
-            <div class="instruction_steps">
-              1- Pick a Topic
-              <br>
-              2- Take the Quizzes
-              <br>
-              3- Track your score
-              <br>
-              4- Learn!
-            </div>
+            <div class="instruction_title">QuizScore:</div>
+            <!-- <div class="instruction_steps"> -->
+              <div class="scoreboard_box">
+                <div class="scoreboard_flex">
+                  <!-- <div class="score_col">
+                    <div class="total_q_flex">
+                      <div class="score_title">Total</div>
+                      <div class="score" id="total_q">12</div>
+                    </div>
+                  </div> -->
+                  <div class="score_col">
+                      <div class="correct_score_q">
+                        <div class="score_title">Right</div>
+                        <div class="score" id="correct_score">11</div>
+                      </div>
+                  </div>
+                  <div class="score_col">
+                      <div class="wrong_score_q">
+                        <div class="score_title">Wrong</div>
+                        <div class="score" id="wrong_score">1</div>
+                      </div>
+                  </div>
+                  <div class="score_col">
+                    <div class="score_title">Grade</div>
+                      <div class="score" id="percent_score">91.7%</div>
+                  </div>
+                  <!-- End of scoreboard -->
+                </div>
+              </div>
+            <!-- </div> -->
           </div>
         </div>
-      </div>
-    </div>
-    <div class="scoreboard_box">
-      <div class="scoreboard_flex">
-        <div class="total_q_col">
-          <div class="total_q_flex">
-            <div class="total_score_title">Total</div>
-            <div class="score" id="total_q">12</div>
-          </div>
-        </div>
-        <div class="correct_q_col">
-            <div class="correct_score_holder">
-                <div class="score" id="correct_score">11</div>
-            </div>
-        </div>
-        <div class="wrong_q_col">
-            <div class="wrong_score_q">
-                <div class="score" id="wrong_score">1</div>
-            </div>
-        </div>
-        <div class="percent_col">
-            <div class="score" id="percent_score">91.7%</div>
-        </div>
-        <!-- End of scoreboard -->
       </div>
     </div>
 
     <a class="link" href="../topics.html?topic=geography">
     <section class="topic_div">
-      <h1>Geography</h1>
+      <h1>US Geography</h1>
     </section>
     </a>
     

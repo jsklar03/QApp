@@ -9,7 +9,7 @@ a:hover{
 }
 
 html, .body {
-    background-color: white;
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     width:100%;
@@ -17,21 +17,28 @@ html, .body {
 
 /* Styles the header */
 .header {
-    background-color: white;
-    align-self: stretch;
+    background-color: whitesmoke;
     display: flex;
     width: 100%;
     align-items: flex-start;
+    padding-left: 75px;
 }
 
-/* Styles the "QuizApp" logo*/
+#q{
+    font-size: 100;
+    font-style: italic;
+}
+
 .logo {
+    /* font:small-caps; */
     color: royalblue;
-    font: 24px Helvetica, sans-serif;
+    font: 24px times, sans-serif;
 }
 
 .hero {
-    background-color: #4169e1;
+    /* background-color: #4169e1; */
+    display: flex;
+    flex-direction: row;
     align-self: center;
     margin-top: 33px;
     width: 100%;
@@ -58,9 +65,9 @@ html, .body {
 
 .chart {
     border-radius: 0px 360px 360px 0px;
-    background-color: white;
+    background-color: whitesmoke;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     margin: 0 auto;
     padding-left: 70px;
@@ -94,22 +101,26 @@ html, .body {
 }
 
 .instruction_title {
-    color: white;
+    color: royalblue;
     text-align: center;
     align-self: start;
-    font: italic 700 50px Inter, sans-serif;
+    font: italic 700 50px times, sans-serif;
 }
 
-.instruction_steps {
+/* .instruction_steps {
     justify-content: center;
-    color: white;
+    color: royalblue;
     align-self: end;
     margin-top: 31px;
     max-width: 558px;
-    font: italic 700 50px Inter, sans-serif;
-}
+    font: italic 700 50px times, sans-serif;
+} */
 
 .scoreboard_box {
+    display:flex;
+    flex-direction: row;
+    justify-content:baseline;
+    align-content: space-between;
     align-self: center;
     margin-top: 39px;
     width: 100%;
@@ -117,103 +128,86 @@ html, .body {
 
 .scoreboard_flex {
     display: flex;
+    align-content: space-evenly;
 }
 
-.total_q_col {
+.score_col {
     display: flex;
     flex-direction: column;
     line-height: normal;
     width: 25%;
-    margin-left: 0px;
+    margin-left: 50px;
 }
 
 .total_q_flex {
     border-radius: var(--selectedItem, 0px);
-    background-color: white;
+    background-color: whitesmoke;
     display: flex;
     width: 100%;
     flex-direction: column;
     margin: 0 auto;
 }
 
-.total_score_title {
+.score_title {
     color: royalblue;
     text-align: center;
     align-self: start;
-    font: italic 700 20px Inter, sans-serif;
+    font: italic 700 20px times, sans-serif;
 }
 
-#total_q {
-    color: royalblue;
-    text-align: center;
-    align-self: start;
-    font: italic 700 100px Inter, sans-serif;
+#wrong_score{
+    color:red;
 }
 
-/* Styles these boxes within the scoreboard */
-.correct_q_col, .wrong_q_col, .percent_col {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 25%;
-}
-
-.correct_score_holder {
-    background-color: #7bb44e;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    margin: 0 auto;
-}
-
-.wrong_score_q {
-    background-color: #eb3333;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    margin: 0 auto;
+#correct_score{
+    color:darkgreen;
 }
 
 .score {
-    color: white;
+    display:flex;
+    flex-direction: column;
+    color: royalblue;
     text-align: center;
     align-self: center;
-    font: italic 700 100px Inter, sans-serif;
+    font: italic 700 100px times, sans-serif;
+    width:33%;
+    margin: 0 auto;
 }
 
 #percent_score {
-    color: white;
+    /* color: white; */
     text-align: center;
-    background-color: #4169e1;
+    /* background-color: #4169e1; */
     width: 100%;
     margin: 0 auto;
-    font: italic 700 100px Inter, sans-serif;
+    font: italic 700 100px times, sans-serif;
 }
 
 .topic_div, .quiz_div {
-    color: white;
-    align-self: center;
-    border-radius: 25px;
-    background-color: #4169e1;
-    margin-top: 35px;
-    width: 100% - 50px;
-    padding-top:2px;
-    padding-bottom:1.75px;
-    padding-left:50px;
-    font: 700 48px Inter, sans-serif;
-}
-
-.topic_div:hover, .quiz_div:hover {
     color: #4169e1;
     align-self: center;
     border-radius: 25px;
-    background-color: white;
-    margin-top: 35px;
+    background-color: whitesmoke;
+    margin-top: 5px;
     width: 100% - 50px;
-    padding-top:2px;
-    padding-bottom:1.75px;
+    /* padding-top:2px; */
+    /* padding-bottom:1.75px; */
     padding-left:50px;
-    font: 700 48px Inter, sans-serif;
+    font: 700 32px times, sans-serif;
+}
+
+.topic_div:hover, .quiz_div:hover {
+    color: whitesmoke;
+    align-self: center;
+    border-radius: 25px;
+    background-color: royalblue;
+    /* margin-top: 35px; */
+    width: 100% - 50px;
+    /* padding-top:2px;
+    padding-bottom:1.75px; */
+    padding-left:50px;
+    font: 700 36px times, sans-serif;
+    font-style: italic;
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
 }
 
