@@ -7,6 +7,7 @@ document.querySelector('.quiz_title').innerHTML = topic +" - "+ level;
 // sets quiz source, quiz level, quiz mc options, quiz answers
 let quiz_source = quiz_bank["topic"][topic];
 let quiz_level = quiz_bank["topic"][topic]["levels"][level];
+console.log(quiz_level)
 let quiz_mc = quiz_bank["topic"][topic]["levels"][level + "_mc"];
 let quiz_answers = quiz_bank["topic"][topic]["levels"][level + "_a"];
 
@@ -37,7 +38,7 @@ function updateQuizCard(){
     q_counter +=1;
     // console.log(q_counter);
     if (q_counter>5){
-        q_counter = 1;
+        q_counter -= 1;
     }
     for (let i=0;i<1;i++){
         document.querySelector('.question_number').innerHTML = q_counter;

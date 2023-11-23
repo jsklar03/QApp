@@ -7,8 +7,12 @@ a:hover{
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+body{
+  background-color: whitesmoke;
+}
+
 .header_box {
-    background-color: white;
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
   }
@@ -34,7 +38,7 @@ a:hover{
 .card_placeholder {
     display: flex;
     flex-direction: column;
-    background-color: royalblue;
+    background-color: whitesmoke;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin: 0 auto;
     display: flex;
@@ -47,7 +51,7 @@ a:hover{
 
 .question_number {
     position: relative;
-    color: white;
+    color: royalblue;
     align-self: end;
     margin-right: 15px;
     font: 700 50px Helvetica, sans-serif;
@@ -55,7 +59,7 @@ a:hover{
 
 .question {
     position: relative;
-    color: white;
+    color: royalblue;
     align-self: center;
     margin-top: 40px;
     font: 700 50px Helvetica, sans-serif;
@@ -98,14 +102,14 @@ a:hover{
 }
 
 .answer_name {
-    color: white;
+    color: royalblue;
     align-self: stretch;
     flex-basis: auto;
     font: 700 30px Helvetica, sans-serif;
   }
 
 .answer_name:hover {
-    color: white;
+    color: royalblue;
     align-self: stretch;
     flex-basis: auto;
     font: italic 700 30px Helvetica, sans-serif;
@@ -114,7 +118,7 @@ a:hover{
 }
 
 #forward_back_box {
-    /* position: relative; */
+    position: relative fixed;
     align-self: stretch;
     display: flex;
     flex-direction: row;
@@ -125,13 +129,13 @@ a:hover{
   }
 
 .back, .forward {
-    color: white;
+    color: royalblue;
     align-self: stretch;
     font: 700 50px Helvetica, sans-serif;
   }
 
 .back:hover, .forward:hover {
-  color: white;
+  color: royalblue;
   font-style: bold;
   align-self: stretch;
   font: 700 55px Helvetica, sans-serif;
