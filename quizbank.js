@@ -84,7 +84,7 @@ const quiz_bank = {
                     ]
                     }
                 },
-        "world_geography":{
+        "World Geography":{
             "levels":{
                 "Easy":["What is the capitol of Spain?",
                 "What is the largest country by land mass?",
@@ -129,7 +129,7 @@ const quiz_bank = {
                 ["Ngev Desert","Panama Gap","Darien Gap","Andes Mountains"]]
             },
         },
-        "historical_geography":{
+        "Historical Geography":{
             "levels":{
                 "Easy":["What empire was the USA previously a colony of?",
                 "What empire was South Africa a colony of?",
@@ -174,7 +174,7 @@ const quiz_bank = {
                 ["New Guinea","Myanmar","South Sudan","Niger"]]
             }
         },
-        "US_history":{
+        "US History":{
             "levels":{
                 "Easy":["Who was the first President?",
                 "Who was the president during the Civil War?",
@@ -219,7 +219,7 @@ const quiz_bank = {
                 ["WWII","Korean War","War of 1812","Vietnam"]]
             }
         },
-        "world_history":{
+        "World History":{
             "levels":{
                 "Easy":["What year did WWII end?",
                 "What year did WWI start?",
@@ -265,7 +265,7 @@ const quiz_bank = {
                 ["Sun Yat-sen","Chang Kai Shek","Mao Zedong","Deng Xiaoping"]]
             }
         },
-        "US_politics":{
+        "US Politics":{
             "levels":{
                 "Easy":["What party does Barack Obama belong to?",
                 "What party does Donald Trump belong to?",
@@ -310,7 +310,7 @@ const quiz_bank = {
                 ["1st","4th","5th","14th"]]
             }
         },
-        "world_politics":{
+        "World Politics":{
             "levels":{
                 "Easy":["Who is the President of Canada?",
                 "Who is the Prime Minister of the UK?",
