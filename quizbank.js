@@ -446,7 +446,7 @@ const quiz_bank = {
                 ["NASDAQ","DJIA","S&P500","TOPIX"]]
             }
         },
-        "Philosopghy":{
+        "Philosophy":{
             "levels":{
                 "Easy":["Which Greek philosopher came up with the 'Socratic Method'?",
                 "Who said 'a wise man knows that he knows nothing'?",
