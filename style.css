@@ -31,9 +31,9 @@ html, .body {
 }
 
 .logo {
-    /* font:small-caps; */
     color: royalblue;
-    font: 24px times, sans-serif;
+    font: 700 24px times, sans-serif;
+    font-style: italic;
 }
 
 .hero {
@@ -50,6 +50,15 @@ html, .body {
     align-self: stretch;
     font: 700 48px Helvetica, sans-serif;
   }
+
+#quiz_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
 
 /* Do I even need this div down here? */
 .hero_flex {
@@ -166,6 +175,30 @@ html, .body {
     margin: 0 auto;
 }
 
+.levels_flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.easy{
+    width:100px;
+    outline: black 2px;
+    outline-style: solid;
+}
+
+.medium{
+    width:100px;
+    outline: black 2px;
+    outline-style: solid;
+}
+
+.hard{
+    width:100px;
+    outline: black 2px;
+    outline-style: solid;
+}
+
 #percent_score {
     /* color: white; */
     text-align: center;
@@ -187,7 +220,6 @@ html, .body {
     width: 33.3%;
     min-width: 300px;
     min-height: 300px;
-    /* padding-left:50px; */
     font: 700 32px times, sans-serif;
 }
 

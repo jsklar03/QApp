@@ -26,7 +26,8 @@ body{
     padding-right: 80px;
     padding-bottom: 12px;
     padding-left: 41px;
-    font: 700 24px Helvetica, sans-serif;
+    font: 700 24px times, sans-serif;
+    font-style: italic;
   }
 
 .quiz_title {
