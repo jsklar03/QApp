@@ -298,3 +298,13 @@ html, .body {
     background-image: url('../assets/Economics_image.png');
     background-size: 100% 100%;   
 }
+
+#wh_img{
+    background-image: url('../assets/WH_image.png');
+    background-size: 100% 100%;      
+}
+
+#wp_img{
+    background-image: url('../assets/WP_image.png');
+    background-size: 100% 100%;      
+}

@@ -3,10 +3,10 @@ finance: https://unsplash.com/@radziejewski?utm_source=unsplash-figma&utm_medium
 economics: https://unsplash.com/@radziejewski?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin 
 us georgaphy: https://unsplash.com/@jchatelain?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
 historical geography:
-world history:
+world history: https://unsplash.com/@alegi__?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
 us politics: https://unsplash.com/@nhuenerfuerst?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
 us history: 
-world politics:
-sports:
-movies:
+world politics: https://unsplash.com/@rhox?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
+sports: https://unsplash.com/@mrthetrain?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
+movies: https://unsplash.com/@photoofblue?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
 Philosophy:
