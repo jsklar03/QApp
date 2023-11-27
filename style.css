@@ -248,3 +248,53 @@ html, .body {
     display: flex;
     flex-direction: column;
 }
+
+.topic_image{
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+}
+
+.topic_title{
+    color: whitesmoke;
+}
+
+#finance_img{
+    background-image: url('../assets/Finance_image.jpeg');
+    background-size: 100% 100%;
+}
+
+#movies_img{
+    background-image: url('../assets/Movies_image.png');
+    background-size: 100% 100%;
+}
+
+#sports_img{
+    background-image: url('../assets/Sports_image.png');
+    background-size: 100% 100%;
+}
+
+#geography_img{
+    background-image: url('../assets/USGeography_image.png');
+    background-size: 100% 100%;
+}
+
+#hg_img{
+    background-image: url('../assets/HG_image.png');
+    background-size: 100% 100%;
+}
+
+#wg_img{
+    background-image: url('../assets/WG_image.png');
+    background-size: 100% 100%;
+}
+
+#us_politics_img{
+    background-image: url('../assets/USPolitics_image.png');
+    background-size: 100% 100%;
+}
+
+#economics_img{
+    background-image: url('../assets/Economics_image.png');
+    background-size: 100% 100%;   
+}

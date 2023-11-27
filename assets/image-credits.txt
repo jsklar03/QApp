@@ -1,1 +1,12 @@
 world geography: https://unsplash.com/@noaa?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin 
+finance: https://unsplash.com/@radziejewski?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
+economics: https://unsplash.com/@radziejewski?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin 
+us georgaphy: https://unsplash.com/@jchatelain?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
+historical geography:
+world history:
+us politics: https://unsplash.com/@nhuenerfuerst?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
+us history: 
+world politics:
+sports:
+movies:
+Philosophy:
