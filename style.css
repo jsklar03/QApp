@@ -300,11 +300,16 @@ html, .body {
 }
 
 #wh_img{
-    background-image: url('../assets/WH_image.png');
+    background-image: url('../assets/WH_img.png');
     background-size: 100% 100%;      
 }
 
 #wp_img{
-    background-image: url('../assets/WP_image.png');
+    background-image: url('../assets/wp_img.png');
     background-size: 100% 100%;      
+}
+
+#us_history_img{
+    background-image: url('../assets/US_hist_img.png');
+    background-size: 100% 100%;     
 }
