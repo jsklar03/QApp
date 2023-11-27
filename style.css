@@ -313,3 +313,8 @@ html, .body {
     background-image: url('../assets/US_hist_img.png');
     background-size: 100% 100%;     
 }
+
+#philosophy_img{
+    background-image: url('../assets/Philosophy.png');
+    background-size: 100% 100%; 
+}

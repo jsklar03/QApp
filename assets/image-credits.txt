@@ -10,3 +10,8 @@ world politics: https://unsplash.com/@rhox?utm_source=unsplash-figma&utm_medium=
 sports: https://unsplash.com/@mrthetrain?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
 movies: https://unsplash.com/@photoofblue?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
 Philosophy: https://unsplash.com/@neonbrand?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
+
+Topics Page:
+Easy: https://unsplash.com/@mroz?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
+Medium: https://unsplash.com/@emilysea?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
+Hard: https://unsplash.com/@kmitchhodge?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin 
