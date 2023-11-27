@@ -318,3 +318,18 @@ html, .body {
     background-image: url('../assets/Philosophy.png');
     background-size: 100% 100%; 
 }
+
+#easy{
+    background-image: url('../assets/Baby.png');
+    background-size: 100% 100%; 
+}
+
+#medium{
+    background-image: url('../assets/Adult.png');
+    background-size: 100% 100%; 
+}
+
+#hard{
+    background-image: url('../assets/Hard.png');
+    background-size: 100% 100%; 
+}
