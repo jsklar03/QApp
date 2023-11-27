@@ -39,7 +39,7 @@ function executeD3 (right_int,wrong_int){
   
     let pieColor = d3.scaleOrdinal()
       .domain(pieData.map(d => d.label))
-      .range(["#2196F3", "#FF5722"]);
+      .range(["#0d9102", "#c90000"]);
   
     let pie = d3.pie()
       .value(d => d.value);
@@ -89,7 +89,7 @@ function executeD3 (right_int,wrong_int){
       .attr("y", d => barY(d.value))
       .attr("width", barX.bandwidth())
       .attr("height", d => barHeight - barY(d.value))
-      .attr("fill", d => (d.label === 'Right' ? '#0d9102' : (d.label === 'Wrong' ? '#FF0000' : '#CCCCCC')));
+      .attr("fill", d => (d.label === 'Right' ? '#0d9102' : (d.label === 'Wrong' ? '#c90000' : '#CCCCCC')));
 }
 
 
