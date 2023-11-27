@@ -7,20 +7,33 @@ a:hover{
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+#q{
+    font-size: 100;
+    font-style: italic;
+}
+
 .logo {
     color: royalblue;
     align-items: start;
-    background-color: white;
+    background-color: whitesmoke;
     width: 100%;
     padding: 12px 20px 12px 41px;
-    font: 700 24px Inter, sans-serif;
+    font: 700 24px times, sans-serif;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.quiz_title{
+    font: times;
 }
 
 .quiz_result_title {
     color: royalblue;
     align-self: stretch;
     white-space: nowrap;
-    font: 700 48px Inter, sans-serif;
+    font: 700 48px times, sans-serif;
 }
 
 .result_performance_flex {
@@ -36,7 +49,7 @@ a:hover{
 .results_label, .performance_label {
     color: royalblue;
     margin-top: 11px;
-    font: 700 50px Inter, sans-serif;
+    font: 700 50px times, sans-serif;
 }
 
 .results_dash {
@@ -63,14 +76,14 @@ a:hover{
     color: #0d9102;
     margin-top: 15px;
     white-space: nowrap;
-    font: 700 50px Inter, sans-serif;
+    font: 700 50px times, sans-serif;
 }
 
 .q_div_wrong {
     color: #c90000;
     margin-top: 15px;
     white-space: nowrap;
-    font: 700 50px Inter, sans-serif;
+    font: 700 50px times, sans-serif;
 }
 
 .performance_column {
@@ -111,11 +124,11 @@ a:hover{
 
 .button_text {
     justify-content: center;
-    color: white;
+    color: whitesmoke;
     text-align: center;
     border-radius: 40px;
     background-color: #00a3ff;
     align-items: center;
     padding: 25px 20px;
-    font: italic 700 36px Inter, sans-serif;
+    font: italic 700 36px times, sans-serif;
 }

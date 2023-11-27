@@ -7,6 +7,11 @@ a:hover{
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+#q{
+  font-size: 100;
+  font-style: italic;
+}
+
 body{
   background-color: whitesmoke;
 }
@@ -33,7 +38,7 @@ body{
 .quiz_title {
     color: royalblue;
     align-self: stretch;
-    font: 700 48px Helvetica, sans-serif;
+    font: 700 48px times, sans-serif;
   }
 
 .card_placeholder {
@@ -55,7 +60,7 @@ body{
     color: royalblue;
     align-self: end;
     margin-right: 15px;
-    font: 700 50px Helvetica, sans-serif;
+    font: 700 50px times, sans-serif;
   }
 
 .question {
@@ -63,7 +68,7 @@ body{
     color: royalblue;
     align-self: center;
     margin-top: 40px;
-    font: 700 50px Helvetica, sans-serif;
+    font: 700 50px times, sans-serif;
   }
 
 .answer_list {
@@ -106,14 +111,14 @@ body{
     color: royalblue;
     align-self: stretch;
     flex-basis: auto;
-    font: 700 30px Helvetica, sans-serif;
+    font: 700 30px times, sans-serif;
   }
 
 .answer_name:hover {
     color: royalblue;
     align-self: stretch;
     flex-basis: auto;
-    font: italic 700 30px Helvetica, sans-serif;
+    font: italic 700 30px times, sans-serif;
     font-style: bold;
     font-size: 35;
 }
@@ -132,14 +137,14 @@ body{
 .back, .forward {
     color: royalblue;
     align-self: stretch;
-    font: 700 50px Helvetica, sans-serif;
+    font: 700 50px times, sans-serif;
   }
 
 .back:hover, .forward:hover {
   color: royalblue;
   font-style: bold;
   align-self: stretch;
-  font: 700 55px Helvetica, sans-serif;
+  font: 700 55px times, sans-serif;
 }
 
 #submit_button {
@@ -162,7 +167,7 @@ body{
     color: white;
     text-align: center;
     align-self: center;
-    font: italic 700 36px Helvetica, sans-serif;
+    font: italic 700 36px times, sans-serif;
   }
 
 #spacer{
