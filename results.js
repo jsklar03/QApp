@@ -1,3 +1,5 @@
+document.querySelector('.quiz_result_title').innerHTML= topic + " - " + level
+
 function retrieveFromLocalStorage() {
     // gets users answers
     let saved_answers = localStorage.getItem('storedAnswers');
