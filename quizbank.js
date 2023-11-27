@@ -137,7 +137,7 @@ const quiz_bank = {
                 "What was the 'super continent' called?",
                 "What European empire did Florida first belong to?"],
 
-                "Easy_a":["Great Britain","Great Britain","Egyptians","Pangea","Spain"],
+                "Easy_a":["Great Britain","Great Britain","Egyptian","Pangea","Spain"],
                 
                 "Easy_mc":[["France","Great Britain","Spain","Portugal"],
                 ["France","Great Britain","Spain","Portugal"],

@@ -3,20 +3,31 @@ let right_score = document.querySelector('#correct_score');
 let wrong_score = document.querySelector('#wrong_score');
 let percentage = document.querySelector('#percent_score');
 
-
-// to Update the scoreboard
 let update_right = localStorage.getItem('right_num') 
 let update_wrong = localStorage.getItem('wrong_num')
 let update_total = localStorage.getItem('stored_quizzes')
-console.log(update_right,update_wrong,update_total)
 
-let right_int = parseInt(update_right);
-let wrong_int = parseInt(update_wrong);
+// to Update the scoreboard
+function retrieveFromLocalStorage(){
+  if (localStorage.getItem('right_num')!=null){
 
+  let right_int = parseInt(update_right);
+  let wrong_int = parseInt(update_wrong);
 
-right_score.innerHTML=right_int;
-wrong_score.innerHTML=wrong_int;
-percentage.innerHTML=(right_int/(right_int+wrong_int)*100)+"%"
+  right_score.innerHTML=right_int;
+  wrong_score.innerHTML=wrong_int;
+  percentage.innerHTML=(right_int/(right_int+wrong_int)*100)+"%"
+  executeD3(right_int,wrong_int)
+}
+else{
+  right_score.innerHTML=0;
+  wrong_score.innerHTML=0;
+  percentage.innerHTML=0+"%";
+  right_int = 0;
+  wrong_int = 0;
+  executeD3(right_int,wrong_int)
+}
+}
 
 function executeD3 (right_int,wrong_int){
     let pieData = [
@@ -91,6 +102,3 @@ function executeD3 (right_int,wrong_int){
       .attr("height", d => barHeight - barY(d.value))
       .attr("fill", d => (d.label === 'Right' ? '#0d9102' : (d.label === 'Wrong' ? '#c90000' : '#CCCCCC')));
 }
-
-
-//also need to update the pie chart

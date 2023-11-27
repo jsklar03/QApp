@@ -181,24 +181,6 @@ html, .body {
     justify-content: space-evenly;
 }
 
-.easy{
-    width:100px;
-    outline: black 2px;
-    outline-style: solid;
-}
-
-.medium{
-    width:100px;
-    outline: black 2px;
-    outline-style: solid;
-}
-
-.hard{
-    width:100px;
-    outline: black 2px;
-    outline-style: solid;
-}
-
 #percent_score {
     /* color: white; */
     text-align: center;
@@ -257,6 +239,7 @@ html, .body {
 
 .topic_title{
     color: whitesmoke;
+    stroke: black 1px;
 }
 
 #finance_img{
@@ -285,7 +268,7 @@ html, .body {
 }
 
 #wg_img{
-    background-image: url('../assets/WG_image.png');
+    background-image: url('../assets/Earth.png');
     background-size: 100% 100%;
 }
 
