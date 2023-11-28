@@ -41,14 +41,15 @@ html, .body {
     display: flex;
     flex-direction: row;
     align-self: center;
-    width: 100%;
+    width: 100% - 75px;
     margin-left: 75px;
 }
 
 .quiz_title {
     color: royalblue;
     align-self: stretch;
-    font: 700 48px Helvetica, sans-serif;
+    font: 700 48px times, sans-serif;
+    padding-left: 60px;
   }
 
 #quiz_list{
@@ -63,7 +64,7 @@ html, .body {
 /* Do I even need this div down here? */
 .hero_flex {
     display: flex;
-    width: 100%;
+    width: 100%
 }
 
 .chart_box {
@@ -102,6 +103,7 @@ html, .body {
     flex-direction: column;
     line-height: normal;
     width: 44%;
+    margin-top: 30px;
 }
 
 .instruction {
@@ -123,6 +125,7 @@ html, .body {
     align-content: space-between;
     align-self: center;
     margin-top: 39px;
+    margin-left: 40px;
     width: 100%;
 }
 
