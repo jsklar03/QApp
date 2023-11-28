@@ -35,8 +35,8 @@ function executeD3 (right_int,wrong_int){
       { label: 'Wrong', value: wrong_int }
   ];
 //sets dimensions of the visualization for the pie chart
-    let pieWidth = 300;
-    let pieHeight = 300;
+    let pieWidth = 250;
+    let pieHeight = 250;
 
 //impacts sizing of the graph
     let pieRadius = Math.min(pieWidth, pieHeight) / 2;
@@ -75,8 +75,8 @@ function executeD3 (right_int,wrong_int){
 
 //sets the width/height of the bar chart
   
-    let barWidth = 300;
-    let barHeight = 300;
+    let barWidth = 250;
+    let barHeight = 250;
 
 //uses stuff from D3.js to set the bars
     let barSvg = d3.select("#barchart")
@@ -92,6 +92,11 @@ function executeD3 (right_int,wrong_int){
     let barY = d3.scaleLinear()
       .domain([0, d3.max(barData, d => d.value)])
       .range([barHeight, 0]);
+
+    if (right_int+wrong_int==0){
+      barHeight = 125;
+      barWidth = 125;
+    }
   
     barSvg.selectAll("rect")
       .data(barData)//data dictionary for the columns
