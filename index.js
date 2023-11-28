@@ -74,6 +74,7 @@ function executeD3 (right_int,wrong_int){
     console.log(right_int,wrong_int)
 
 //sets the width/height of the bar chart
+  
     let barWidth = 300;
     let barHeight = 300;
 
