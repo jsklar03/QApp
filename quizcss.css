@@ -8,7 +8,7 @@ a:hover{
 }
 
 #q{
-  font-size: 100;
+  font-size: 100px;
   font-style: italic;
 }
 
@@ -95,7 +95,7 @@ body{
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  font-style: bold;
+  font-weight:bold;
 }
 .answer::selection {
   align-items: flex-start;
@@ -103,7 +103,7 @@ body{
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  font-style: bold;
+  font-weight: bold;
   color:greenyellow;
 }
 
@@ -119,17 +119,17 @@ body{
     align-self: stretch;
     flex-basis: auto;
     font: italic 700 30px times, sans-serif;
-    font-style: bold;
-    font-size: 35;
+    font-weight: bold;
+    font-size: 35px;
 }
 
 #forward_back_box {
-    position: relative fixed;
+    position: static;
     align-self: stretch;
     display: flex;
     flex-direction: row;
-    margin-top: 100px;
-    width: calc('.card_placeholder');
+    margin-top: 80px;
+    width: 100%;
     align-items: flex-start;
     justify-content: space-between;
   }
@@ -142,7 +142,7 @@ body{
 
 .back:hover, .forward:hover {
   color: royalblue;
-  font-style: bold;
+  font-weight: bold;
   align-self: stretch;
   font: 700 55px times, sans-serif;
 }

@@ -8,7 +8,7 @@ a:hover{
 }
 
 #q{
-    font-size: 100;
+    font-size: 100px;
     font-style: italic;
 }
 
@@ -26,7 +26,7 @@ body{
 }
 
 .quiz_title{
-    font: times;
+    font: 24px times;
 }
 
 .quiz_result_title {
@@ -96,7 +96,6 @@ body{
 }
 
 .img {
-    aspect-ratio: 1.72;
     object-fit: contain;
     object-position: center;
     width: 100%;
