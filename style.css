@@ -244,76 +244,76 @@ html, .body {
 }
 
 #finance_img{
-    background-image: url('../assets/Finance_image.jpeg');
+    background-image: url('./assets/Finance_image.jpeg');
     background-size: 100% 100%;
 }
 
 #movies_img{
-    background-image: url('../assets/Movies_image.png');
+    background-image: url('./assets/Movies_image.png');
     background-size: 100% 100%;
 }
 
 #sports_img{
-    background-image: url('../assets/Sports_image.png');
+    background-image: url('./assets/Sports_image.png');
     background-size: 100% 100%;
 }
 
 #geography_img{
-    background-image: url('../assets/USGeography_image.png');
+    background-image: url('./assets/USGeography_image.png');
     background-size: 100% 100%;
 }
 
 #hg_img{
-    background-image: url('../assets/HG_image.png');
+    background-image: url('./assets/HG_image.png');
     background-size: 100% 100%;
 }
 
 #wg_img{
-    background-image: url('../assets/Earth.png');
+    background-image: url('./assets/Earth.png');
     background-size: 100% 100%;
 }
 
 #us_politics_img{
-    background-image: url('../assets/USPolitics_image.png');
+    background-image: url('./assets/USPolitics_image.png');
     background-size: 100% 100%;
 }
 
 #economics_img{
-    background-image: url('../assets/Economics_image.png');
+    background-image: url('./assets/Economics_image.png');
     background-size: 100% 100%;   
 }
 
 #wh_img{
-    background-image: url('../assets/WH_img.png');
+    background-image: url('./assets/WH_img.png');
     background-size: 100% 100%;      
 }
 
 #wp_img{
-    background-image: url('../assets/wp_img.png');
+    background-image: url('./assets/wp_img.png');
     background-size: 100% 100%;      
 }
 
 #us_history_img{
-    background-image: url('../assets/US_hist_img.png');
+    background-image: url('./assets/US_hist_img.png');
     background-size: 100% 100%;     
 }
 
 #philosophy_img{
-    background-image: url('../assets/Philosophy.png');
+    background-image: url('./assets/Philosophy.png');
     background-size: 100% 100%; 
 }
 
 #easy{
-    background-image: url('../assets/Baby.png');
+    background-image: url('./assets/Baby.png');
     background-size: 100% 100%; 
 }
 
 #medium{
-    background-image: url('../assets/Adult.png');
+    background-image: url('./assets/Adult.png');
     background-size: 100% 100%; 
 }
 
 #hard{
-    background-image: url('../assets/Hard.png');
+    background-image: url('./assets/Hard.png');
     background-size: 100% 100%; 
 }
