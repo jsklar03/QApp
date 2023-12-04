@@ -1,4 +1,4 @@
-document.getElementById("submit_btn").setAttribute("href", "../results.html?topic="+ topic + "&level="+level);
+document.getElementById("submit_btn").setAttribute("href", "./results.html?topic="+ topic + "&level="+level);
 console.log(document.getElementById("submit_btn").children[0])
 
 document.querySelector('.quiz_title').innerHTML = topic +" - "+ level;
