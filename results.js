@@ -27,7 +27,11 @@ function checkAnswers(answer_array,real_answers){
     wrong_counter = total_counter - right_counter;
     console.log(total_counter, right_counter, wrong_counter);
     percentage = ((right_counter/total_counter)*100);
-    saveToLocalStorage(total_counter, right_counter, wrong_counter, percentage);
+    total_right_num += right_counter;
+    console.log(total_right_num)
+    total_wrong_num += wrong_counter;
+    console.log(total_wrong_num)
+    saveToLocalStorage(total_counter, right_counter, wrong_counter, percentage, total_right_num,total_wrong_num);
     changeColor(color_array);
 }
 
@@ -45,7 +49,7 @@ function changeColor(color_array){
 }
 console.log(scores)
 
-function saveToLocalStorage(total_counter, right_counter, wrong_counter){
+function saveToLocalStorage(total_counter, right_counter, wrong_counter, total_right_num, total_wrong_num){
     console.log("Save Function")
     let stored_quizzes = new ResultSet(total_counter,right_counter,wrong_counter);
     stored_quizzes.total_counter = total_counter;
@@ -61,7 +65,23 @@ function saveToLocalStorage(total_counter, right_counter, wrong_counter){
     localStorage.setItem('total_num', total_counter);
     localStorage.setItem('right_num', right_counter)
     localStorage.setItem('wrong_num',wrong_counter)
-    console.log(localStorage)
+    let TRN = parseInt(localStorage.getItem('total_right_num'));
+    let TWN = parseInt(localStorage.getItem('total_wrong_num'));
+    if (TRN>0||TWN>0){
+      TRN += right_counter;
+      TWN += wrong_counter;
+      localStorage.setItem('total_right_num',TRN);
+      localStorage.setItem('total_wrong_num',TWN);
+    }
+    else {
+      TRN = right_counter;
+      TWN = wrong_counter;
+      localStorage.setItem('total_right_num',TRN);
+      localStorage.setItem('total_wrong_num',TWN);
+    }
+    // localStorage.setItem('total_right_num',TRN);
+    // localStorage.setItem('total_wrong_num',TWN);
+    console.log(localStorage.getItem('total_right_num'));
     executeD3(right_counter,wrong_counter);
   }
   

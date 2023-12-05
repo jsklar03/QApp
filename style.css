@@ -42,7 +42,7 @@ html, .body {
     flex-direction: row;
     align-self: center;
     width: calc(100% - 75px);
-    margin-left: 75px;
+    margin-left: 35px;
 }
 
 .quiz_title {
@@ -71,7 +71,7 @@ html, .body {
       display: flex;
       flex-direction: column;
       line-height: normal;
-      width: 40%;
+      width: 50%;
       margin-left: 0px;
     }
 
@@ -82,10 +82,11 @@ html, .body {
     flex-direction: row;
     width: 100%;
     margin: 0 auto;
-    padding-left: 70px;
+    padding-left: 10px;
     padding-right: 0px;
     /* padding-top: 11px; */
     padding-bottom: 11px;
+    justify-content: space-evenly;
 }
 
 /* placeholder for chart picture */
@@ -102,7 +103,7 @@ html, .body {
     display: flex;
     flex-direction: column;
     line-height: normal;
-    width: 60%;
+    width: 50%;
     margin-top: 30px;
 }
 
@@ -120,12 +121,13 @@ html, .body {
 
 .scoreboard_box {
     display:flex;
+    flex-wrap:wrap;
     flex-direction: row;
     justify-content: flex-start;
     align-content: space-between;
-    align-self: center;
-    margin-top: 39px;
-    margin-left: 40px;
+    /* align-self: flex-start; */
+    margin-top: 30px;
+    /* margin-left: 40px; */
     width: 100%;
 }
 
@@ -139,7 +141,7 @@ html, .body {
     flex-direction: column;
     line-height: normal;
     width: 25%;
-    margin-left: 50px;
+    margin-left: 25px;
 }
 
 .total_q_flex {

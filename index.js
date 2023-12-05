@@ -7,16 +7,20 @@ let update_right = localStorage.getItem('right_num')
 let update_wrong = localStorage.getItem('wrong_num')
 let update_total = localStorage.getItem('stored_quizzes')
 
+let update_total_right = localStorage.getItem('total_right_num');
+let update_total_wrong = localStorage.getItem('total_wrong_num');
+
 // to Update the scoreboard
 function retrieveFromLocalStorage(){
   if (localStorage.getItem('right_num')!=null){
 
-  let right_int = parseInt(update_right);
-  let wrong_int = parseInt(update_wrong);
+  let right_int = parseInt(update_total_right);
+  let wrong_int = parseInt(update_total_wrong);
 
   right_score.innerHTML=right_int;
   wrong_score.innerHTML=wrong_int;
-  percentage.innerHTML=(right_int/(right_int+wrong_int)*100)+"%"
+  let percent_score = (right_int/(right_int+wrong_int)*100);
+  percentage.innerHTML=(percent_score.toFixed(1))+"%"
   executeD3(right_int,wrong_int)
 }
 else{
@@ -75,7 +79,7 @@ function executeD3 (right_int,wrong_int){
 
 //sets the width/height of the bar chart
   
-    let barWidth = 250;
+    let barWidth = 200;
     let barHeight = 250;
 
 //uses stuff from D3.js to set the bars
@@ -95,7 +99,7 @@ function executeD3 (right_int,wrong_int){
 
     if (right_int+wrong_int==0){
       barHeight = 125;
-      barWidth = 125;
+      barWidth = 100;
     }
   
     barSvg.selectAll("rect")

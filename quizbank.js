@@ -3,6 +3,10 @@ let total_num = [];
 let right_num = [];
 let wrong_num = [];
 
+let total_right_num = 0;
+let total_wrong_num = 0;
+console.log(total_right_num, total_wrong_num)
+
 
 let right_counter = 0;
 let wrong_counter = 0;
