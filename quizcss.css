@@ -142,6 +142,13 @@ body{
     font: 700 50px times, sans-serif;
   }
 
+.back_hidden, .forward_hidden {
+  visibility: hidden;
+  color: royalblue;
+  align-self: stretch;
+  font: 700 50px times, sans-serif;
+}
+
 .back:hover, .forward:hover {
   color: royalblue;
   font-weight: bold;

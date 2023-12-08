@@ -92,6 +92,21 @@ function updateMultipleChoice(){
     document.querySelector('#b').setAttribute('class','answer_name');
     document.querySelector('#c').setAttribute('class','answer_name');
     document.querySelector('#d').setAttribute('class','answer_name');
+    if (q_counter == 1){
+        document.querySelector('.back').setAttribute('class','back_hidden')
+    }
+    else if(q_counter==5){
+        document.querySelector('.forward').setAttribute('class','forward_hidden')
+    }
+    else{
+        if (document.querySelector('.back_hidden')!=null){
+            document.querySelector('.back_hidden').setAttribute('class','back');
+        }
+        else if (document.querySelector('.forward_hidden')!=null){
+            document.querySelector('.forward_hidden').setAttribute('class','forward')
+        }
+    console.log(q_counter)
+}
 }
 
 // Dynamically records the answers
@@ -132,3 +147,4 @@ function changeColor(e){
         answer_chosen.setAttribute('class','answer_chosen')
     }
   }
+
