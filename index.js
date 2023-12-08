@@ -2,11 +2,11 @@
 let right_score = document.querySelector('#correct_score');
 let wrong_score = document.querySelector('#wrong_score');
 let percentage = document.querySelector('#percent_score');
-
+// Retrieves items from localStorage
 let update_right = localStorage.getItem('right_num') 
 let update_wrong = localStorage.getItem('wrong_num')
 let update_total = localStorage.getItem('stored_quizzes')
-
+// Retrieves total scores from localStorage
 let update_total_right = localStorage.getItem('total_right_num');
 let update_total_wrong = localStorage.getItem('total_wrong_num');
 
@@ -32,7 +32,7 @@ else{
   executeD3(right_int,wrong_int)
 }
 }
-
+// Executes the D3.js visualizations
 function executeD3 (right_int,wrong_int){
     let pieData = [
       { label: 'Right', value: right_int },
