@@ -1,16 +1,18 @@
+// Submit button
 document.getElementById("submit_btn").setAttribute("href", "./results.html?topic="+ topic + "&level="+level);
-console.log(document.getElementById("submit_btn").children[0])
+// console.log(document.getElementById("submit_btn").children[0])
 
+// Sets the quiz title using the DOM
 document.querySelector('.quiz_title').innerHTML = topic +" - "+ level;
 
-//defines the inputs to the quizzle class object. 
+// Defines the inputs to the quizzle class object. 
 // sets quiz source, quiz level, quiz mc options, quiz answers
 let quiz_source = quiz_bank["topic"][topic];
 let quiz_level = quiz_bank["topic"][topic]["levels"][level];
-console.log(quiz_level)
+
 let quiz_mc = quiz_bank["topic"][topic]["levels"][level + "_mc"];
 let quiz_answers = quiz_bank["topic"][topic]["levels"][level + "_a"];
-//selects the MC options using the DOM
+// Selects the MC options using the DOM
 let answer_a = document.querySelector('#a').innerHTML;
 let answer_b = document.querySelector('#b').innerHTML;
 let answer_c = document.querySelector('#c').innerHTML;
@@ -22,20 +24,19 @@ let selected_b = document.querySelector("#b");
 let selected_c = document.querySelector("#c");
 let selected_d = document.querySelector("#d");
 
-//Event listener to trigger the recording of answers on click
+// Event listener to trigger the recording of answers on click
 selected_a.addEventListener('click', (e) => recordAnswers(e));
 selected_b.addEventListener('click', (e) => recordAnswers(e));
 selected_c.addEventListener('click', (e) => recordAnswers(e));
 selected_d.addEventListener('click', (e) => recordAnswers(e));
 
 
-//kicks off the createQuizzes function
+// Kicks off the createQuizzes function
 function populate_quiz(){
-    console.log("first function triggered");
     updateQuizCard();
 }
 
-//DOM items for updating quiz card
+// DOM items for updating quiz card
 let card= document.querySelector('.card_placeholder');
 let question_number= document.querySelector('.question_number');
 let card_question = document.querySelector('.question');
@@ -43,10 +44,10 @@ let back_btn= document.querySelector('.back');
 let forward_btn= document.querySelector('.forward');
 // Keeps track of which question the user is on
 let q_counter = 0;
-//takes in the questions as an array from the quizbank
+// Takes in the questions as an array from the quizbank
 let question_array = [quiz_level[0],quiz_level[1],quiz_level[2],quiz_level[3],quiz_level[4]];
 
-//Updates the quiz question card
+// Updates the quiz question card
 function updateQuizCard(){
     q_counter +=1;
     if (q_counter>5){
@@ -71,14 +72,12 @@ function goBackQuestion(){
         document.querySelector('.question_number').innerHTML = q_counter;
     }
     for(let k=0;k<1;k++){
-        console.log(k);
-        console.log(question_array[q_counter - 1]);
         document.querySelector('.question').innerHTML = question_array[q_counter - 1];
     }
     updateMultipleChoice();
 }
 
-// Updates the questions and answers on the quiz card
+// Updates the questions and answers on the quiz card, resets color
 function updateMultipleChoice(){
     document.querySelector('#a').innerHTML = quiz_mc[q_counter - 1][0];
     document.querySelector('#b').innerHTML = quiz_mc[q_counter - 1][1];
@@ -88,7 +87,7 @@ function updateMultipleChoice(){
     answer_b = document.querySelector('#b').innerHTML;
     answer_c = document.querySelector('#c').innerHTML;
     answer_d = document.querySelector('#d').innerHTML;
-    console.log(answer_a, answer_b, answer_c, answer_d);
+
     document.querySelector('#a').setAttribute('class','answer_name');
     document.querySelector('#b').setAttribute('class','answer_name');
     document.querySelector('#c').setAttribute('class','answer_name');
@@ -98,7 +97,7 @@ function updateMultipleChoice(){
 // Dynamically records the answers
 function recordAnswers(e){
     user_answers[q_counter-1] = e.target.innerText;
-    console.log(user_answers);
+
     saveToLocalStorage(user_answers);
 }
 // Saves the answers, the real answers, the questions to local storage
@@ -111,12 +110,13 @@ function saveToLocalStorage(user_answers){
     stored_answers.quiz_level = level;
     localStorage.setItem('storedAnswers', user_answers);
   }
+// selects the elements from the DOM to change the answer color
+selected_a.addEventListener('click', (e) => changeColor(e));
+selected_b.addEventListener('click', (e) => changeColor(e));
+selected_c.addEventListener('click', (e) => changeColor(e));
+selected_d.addEventListener('click', (e) => changeColor(e));
 
-  selected_a.addEventListener('click', (e) => changeColor(e));
-  selected_b.addEventListener('click', (e) => changeColor(e));
-  selected_c.addEventListener('click', (e) => changeColor(e));
-  selected_d.addEventListener('click', (e) => changeColor(e));
-  
+// Provides feedback to the user that they have chosen an answer
 function changeColor(e){
     let answer_chosen = e.target
     if (selected_a.classList.contains('answer_chosen')==true ||

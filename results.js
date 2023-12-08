@@ -6,15 +6,16 @@ function retrieveFromLocalStorage() {
     let answer_array = saved_answers.split(',');
     checkAnswers(answer_array, real_answers);
 }
-
+//Sets up the color array for identifying correct/wrong answers
 let color_array = ['','','','','']
 
+//Checks the answers to see what's right and wrong
 function checkAnswers(answer_array,real_answers){
     total_counter+=real_answers.length;
     for(let i = 0, k=0; i<=answer_array.length,k<real_answers.length;i++,k++){
         let user_answer = answer_array[i];
         let real_answer = real_answers[k];
-        console.log(real_answer + " vs " + user_answer);
+        
         if (user_answer == real_answer){
                 right_counter+=1;
                 color_array[i]='green'
@@ -23,14 +24,11 @@ function checkAnswers(answer_array,real_answers){
                 color_array[i]='red'
             }
         }
-    console.log(color_array)
+    
     wrong_counter = total_counter - right_counter;
-    console.log(total_counter, right_counter, wrong_counter);
     percentage = ((right_counter/total_counter)*100);
     total_right_num += right_counter;
-    console.log(total_right_num)
     total_wrong_num += wrong_counter;
-    console.log(total_wrong_num)
     saveToLocalStorage(total_counter, right_counter, wrong_counter, percentage, total_right_num,total_wrong_num);
     changeColor(color_array);
 }
@@ -47,19 +45,15 @@ function changeColor(color_array){
         }
     }
 }
-console.log(scores)
 
 function saveToLocalStorage(total_counter, right_counter, wrong_counter, total_right_num, total_wrong_num){
-    console.log("Save Function")
     let stored_quizzes = new ResultSet(total_counter,right_counter,wrong_counter);
     stored_quizzes.total_counter = total_counter;
-    console.log(stored_quizzes.total_counter);
 
     stored_quizzes.right_counter = right_counter;
     stored_quizzes.wrong_counter = wrong_counter;
     stored_quizzes.percentage = percentage;
 
-    console.log(right_counter,wrong_counter,percentage);
     stored_quizzes.category = topic;
     stored_quizzes.quiz_level = level;
     localStorage.setItem('total_num', total_counter);
@@ -79,13 +73,11 @@ function saveToLocalStorage(total_counter, right_counter, wrong_counter, total_r
       localStorage.setItem('total_right_num',TRN);
       localStorage.setItem('total_wrong_num',TWN);
     }
-    // localStorage.setItem('total_right_num',TRN);
-    // localStorage.setItem('total_wrong_num',TWN);
-    console.log(localStorage.getItem('total_right_num'));
+
     executeD3(right_counter,wrong_counter);
   }
   
-// Pie chart
+// Pie chart and bar chart function for D3.js
 function executeD3 (right_counter,wrong_counter){
     let pieData = [
       { label: 'Right', value: right_counter },
@@ -128,7 +120,6 @@ function executeD3 (right_counter,wrong_counter){
       { label: 'Right', value: right_counter },
       { label: 'Wrong', value: wrong_counter }
   ];
-    console.log(right_counter,wrong_counter)
 
 //sets the width/height of the bar chart
     let barWidth = 300;
@@ -159,4 +150,3 @@ function executeD3 (right_counter,wrong_counter){
       .attr("height", d => barHeight - barY(d.value))
       .attr("fill", d => (d.label === 'Right' ? '#0d9102' : (d.label === 'Wrong' ? '#c90000' : '#CCCCCC')));
 }
-console.log(right_counter,wrong_counter)

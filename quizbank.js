@@ -5,8 +5,6 @@ let wrong_num = [];
 
 let total_right_num = 0;
 let total_wrong_num = 0;
-console.log(total_right_num, total_wrong_num)
-
 
 let right_counter = 0;
 let wrong_counter = 0;
@@ -27,9 +25,8 @@ const params = new URLSearchParams(queryString);
 //console.log(params);
 
 const topic = params.get('topic');
-console.log(topic);
+
 const level = params.get('level');
-console.log(level);
 
 const quiz_bank = {
     "topic":{
@@ -591,12 +588,9 @@ const quiz_bank = {
 
 
 let user_answers = ['','','','',''];
-// console.log(topic)
-// console.log(level)
-// console.log(quiz_bank["topic"])
-// console.log(quiz_bank["topic"][topic])
+
 let real_answers = quiz_bank["topic"][topic]["levels"][level + "_a"];
-console.log(real_answers)
+
 let questions = quiz_bank["topic"][topic]["levels"][level];
 let category = topic;
 
@@ -609,7 +603,6 @@ class AnswerSet {
         this.quiz_level = level;
         this.element = null;
     }
-
 }
 
 class ResultSet {
