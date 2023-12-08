@@ -89,6 +89,17 @@ body{
     margin-top: 20px;
   }
 
+.answer_chosen {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  justify-content: center; 
+  color: #00a3ff;
+  font: 700 30px times, sans-serif;
+  align-self: stretch;
+  flex-basis: auto;
+}
+
 .answer:hover {
   align-items: flex-start;
   align-self: stretch;    
@@ -96,15 +107,6 @@ body{
   justify-content: center;
   margin-top: 20px;
   font-weight:bold;
-}
-.answer::selection {
-  align-items: flex-start;
-  align-self: stretch;    
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  font-weight: bold;
-  color:greenyellow;
 }
 
 .answer_name {
@@ -173,3 +175,4 @@ body{
 #spacer{
   height: 200px;
 }
+

@@ -10,11 +10,24 @@ let quiz_level = quiz_bank["topic"][topic]["levels"][level];
 console.log(quiz_level)
 let quiz_mc = quiz_bank["topic"][topic]["levels"][level + "_mc"];
 let quiz_answers = quiz_bank["topic"][topic]["levels"][level + "_a"];
-
+//selects the MC options using the DOM
 let answer_a = document.querySelector('#a').innerHTML;
 let answer_b = document.querySelector('#b').innerHTML;
 let answer_c = document.querySelector('#c').innerHTML;
 let answer_d = document.querySelector('#d').innerHTML;
+
+// DOM to select the multiple choice answers
+let selected_a = document.querySelector("#a");
+let selected_b = document.querySelector("#b");
+let selected_c = document.querySelector("#c");
+let selected_d = document.querySelector("#d");
+
+//Event listener to trigger the recording of answers on click
+selected_a.addEventListener('click', (e) => recordAnswers(e));
+selected_b.addEventListener('click', (e) => recordAnswers(e));
+selected_c.addEventListener('click', (e) => recordAnswers(e));
+selected_d.addEventListener('click', (e) => recordAnswers(e));
+
 
 //kicks off the createQuizzes function
 function populate_quiz(){
@@ -76,25 +89,17 @@ function updateMultipleChoice(){
     answer_c = document.querySelector('#c').innerHTML;
     answer_d = document.querySelector('#d').innerHTML;
     console.log(answer_a, answer_b, answer_c, answer_d);
+    document.querySelector('#a').setAttribute('class','answer_name');
+    document.querySelector('#b').setAttribute('class','answer_name');
+    document.querySelector('#c').setAttribute('class','answer_name');
+    document.querySelector('#d').setAttribute('class','answer_name');
 }
-
-// DOM to select the multiple choice answers
-let selected_a = document.querySelector("#a");
-let selected_b = document.querySelector("#b");
-let selected_c = document.querySelector("#c");
-let selected_d = document.querySelector("#d");
-
-//Event listener to trigger the recording of answers on click
-selected_a.addEventListener('click', (e) => recordAnswers(e));
-selected_b.addEventListener('click', (e) => recordAnswers(e));
-selected_c.addEventListener('click', (e) => recordAnswers(e));
-selected_d.addEventListener('click', (e) => recordAnswers(e));
 
 // Dynamically records the answers
 function recordAnswers(e){
     user_answers[q_counter-1] = e.target.innerText;
     console.log(user_answers);
-    saveToLocalStorage(user_answers)
+    saveToLocalStorage(user_answers);
 }
 // Saves the answers, the real answers, the questions to local storage
 function saveToLocalStorage(user_answers){
@@ -106,4 +111,24 @@ function saveToLocalStorage(user_answers){
     stored_answers.quiz_level = level;
     localStorage.setItem('storedAnswers', user_answers);
   }
+
+  selected_a.addEventListener('click', (e) => changeColor(e));
+  selected_b.addEventListener('click', (e) => changeColor(e));
+  selected_c.addEventListener('click', (e) => changeColor(e));
+  selected_d.addEventListener('click', (e) => changeColor(e));
   
+function changeColor(e){
+    let answer_chosen = e.target
+    if (selected_a.classList.contains('answer_chosen')==true ||
+    selected_b.classList.contains('answer_chosen')==true ||
+    selected_c.classList.contains('answer_chosen')==true ||
+    selected_d.classList.contains('answer_chosen')==true){
+        selected_a.setAttribute('class','answer_name');
+        selected_b.setAttribute('class','answer_name');
+        selected_c.setAttribute('class','answer_name');
+        selected_d.setAttribute('class','answer_name');
+    }
+    else{
+        answer_chosen.setAttribute('class','answer_chosen')
+    }
+  }
