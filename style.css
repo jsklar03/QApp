@@ -48,6 +48,7 @@ html, .body {
 .quiz_title {
     color: royalblue;
     align-self: stretch;
+    text-align: center;
     font: 700 48px times, sans-serif;
     padding-left: 60px;
   }

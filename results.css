@@ -25,12 +25,9 @@ body{
     background-color: whitesmoke;
 }
 
-.quiz_title{
-    font: 24px times;
-}
-
 .quiz_result_title {
     color: royalblue;
+    text-align: center;
     align-self: stretch;
     white-space: nowrap;
     font: 700 48px times, sans-serif;

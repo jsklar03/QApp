@@ -105,7 +105,6 @@ function updateMultipleChoice(){
         else if (document.querySelector('.forward_hidden')!=null){
             document.querySelector('.forward_hidden').setAttribute('class','forward')
         }
-    console.log(q_counter)
 }
 }
 
