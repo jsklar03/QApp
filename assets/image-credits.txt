@@ -3,10 +3,10 @@ world geography: https://unsplash.com/@noaa?utm_source=unsplash-figma&utm_medium
 finance: https://unsplash.com/@radziejewski?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
 economics: https://unsplash.com/@radziejewski?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin 
 us georgaphy: https://unsplash.com/@jchatelain?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
-historical geography:
+historical geography:https://unsplash.com/@cadop?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
 world history: https://unsplash.com/@alegi__?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
 us politics: https://unsplash.com/@nhuenerfuerst?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
-us history: 
+us history: https://unsplash.com/@rmarte?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
 world politics: https://unsplash.com/@rhox?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
 sports: https://unsplash.com/@mrthetrain?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
 movies: https://unsplash.com/@photoofblue?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
@@ -16,3 +16,9 @@ Topics Page:
 Easy: https://unsplash.com/@mroz?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
 Medium: https://unsplash.com/@emilysea?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin
 Hard: https://unsplash.com/@kmitchhodge?utm_source=unsplash-figma&utm_medium=referral&utm_campaign=plugin 
+
+Other Supporting resources: 
+https://www.w3schools.com/ 
+https://d3js.org/ 
+I also got help from Howie, Pranav and Yi-hao 
+I referenced some lecture slides from the first few weeks of class for some support on syntax as well
